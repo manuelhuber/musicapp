@@ -15,11 +15,13 @@ class FingerControl : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view = inflater!!.inflate(R.layout.fragment_finger_control, container, false)
+        return inflater!!.inflate(R.layout.fragment_finger_control, container, false)
+    }
 
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         buttonFingerControl.setOnClickListener { getFingerString() }
         getFingerString()
-        return view
     }
 
     private fun getFingerString() {
@@ -28,10 +30,10 @@ class FingerControl : Fragment() {
 
     private fun getExercise(): String {
         val fingers: MutableCollection<Finger> = mutableListOf()
-        val max: Int = this.getNumberOfFingers();
+        val max: Int = this.getNumberOfFingers()
         while (fingers.size < max && fingers.size < 10) {
             // Constructor creates a random finger
-            val potentialFinger = Finger();
+            val potentialFinger = Finger()
             // Add the finger if its not in the array already
             if (!fingers.any { finger -> finger == potentialFinger }) {
                 fingers.add(potentialFinger)

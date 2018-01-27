@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.content_exercise.*
 
 class Exercise : AppCompatActivity() {
 
-    val exercises: List<Fragment> = listOf(Intervals(), FingerControl())
+    val exercises: List<Fragment> = listOf(FingerControl(), Intervals())
     var currentExercise: Int = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {

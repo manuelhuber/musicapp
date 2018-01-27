@@ -19,15 +19,14 @@ class Intervals : Fragment() {
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         super.onViewCreated(view, savedInstanceState)
+        return inflater!!.inflate(R.layout.fragment_intervals, container, false)
+    }
 
-        val view = inflater!!.inflate(R.layout.fragment_intervals, container, false)
-
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         textCurrentNote.text = note.toString()
         textCurrentNote.setOnClickListener { newNote() }
-
         newNote()
-
-        return view
     }
 
     fun newNote() {
