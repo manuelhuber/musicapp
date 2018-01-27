@@ -30,83 +30,84 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/layoutIntervalCenter"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@android:drawable/btn_default"
+        android:clickable="true"
+        android:focusable="true"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0">
 
-        <LinearLayout
-            android:id="@+id/layout_steps_down"
+        <TextView
+            android:id="@+id/textStepsDown"
             android:layout_width="wrap_content"
-            android:layout_height="248dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginStart="16dp"
-            android:gravity="center"
-            android:orientation="vertical"
+            android:text="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toStartOf="@+id/imageStepsDown"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textStepsDown"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <Button
-                android:id="@+id/button_steps_down"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="down" />
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageStepsDown"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_arrow_downward_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textCurrentNote"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textCurrentNote"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="A"
             android:textAlignment="center"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/layout_steps_up"
-            app:layout_constraintStart_toEndOf="@+id/layout_steps_down"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <LinearLayout
-            android:id="@+id/layout_steps_up"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:orientation="vertical"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="72sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textStepsUp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/textStepsUp"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:layout_marginBottom="8dp"
+            android:text="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageStepsUp"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/button_steps_up"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="up" />
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageStepsUp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_arrow_upward_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textCurrentNote"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

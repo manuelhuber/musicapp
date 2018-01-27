@@ -25,25 +25,30 @@ class Intervals : Fragment() {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         textCurrentNote.text = note.toString()
-        textCurrentNote.setOnClickListener { newNote() }
+        layoutIntervalCenter.setOnClickListener { newNote() }
         newNote()
     }
 
-    fun newNote() {
+    private fun newNote() {
         note = note.steps(step)
         textCurrentNote.text = note.toString()
         updateButtons()
     }
 
-    fun updateButtons() {
+    private fun updateButtons() {
         do step = rndNumber(-11, 11) while (step == 0)
         if (step > 0) {
             textStepsUp.text = step.toString()
+            imageStepsUp.visibility = View.VISIBLE
+
             textStepsDown.text = ""
+            imageStepsDown.visibility = View.INVISIBLE
         } else {
             textStepsDown.text = step.toString()
-            textStepsUp.text = ""
+            imageStepsDown.visibility = View.VISIBLE
 
+            textStepsUp.text = ""
+            imageStepsUp.visibility = View.INVISIBLE
         }
     }
 }
