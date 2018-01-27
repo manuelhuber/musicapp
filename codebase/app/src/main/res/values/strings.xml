@@ -25,69 +25,73 @@
     <string name="intervals_explanation">There will appear a arrow and a number to the left or right of the note. The number are the steps and the arrow are the direct (left = down, right = up) you have to go. Work out the note and then press the arrow to see the solution and get the next exercise</string>
     <string name="intervals_difficulty">maximum steps</string>
 
-    <!-- SCALES -->
+    <!-- SCALES EXERCISE-->
     <string name="scales_title">scales</string>
     <string name="scales_heading">scales are only series of steps!</string>
     <string name="scales_explanation">Work out the scale for the given note.</string>
     <string name="scales_show_solution">show solution</string>
     <string name="scales_new_exercise">new exercise</string>
-    <string name="scales_major">major</string>
-    <string name="scales_minor">minor </string>
-    <string name="scales_harmonic_minor">harmonic minor</string>
-    <string name="scales_hungarian_minor">hungarian minor</string>
-    <string name="scales_hungarian_major">hungarian major</string>
-    <string name="scales_blues">blues</string>
-    <string name="scales_pentatonic_major">pentatonic major</string>
-    <string name="scales_pentatonic_minor">pentatonic minor</string>
-    <string name="scales_spanish_eight">spanish eight</string>
-    <string name="scales_oriental">oriental</string>
-    <string name="scales_reduced">reduced</string>
-    <string name="scales_overtone">overtone</string>
-    <string name="scales_enigmatic">enigmatic</string>
 
-    <!-- ACCORDS -->
+    <!-- SCALE NAMES -->
+    <string name="scale_major">major</string>
+    <string name="scale_minor">minor </string>
+    <string name="scale_harmonic_minor">harmonic minor</string>
+    <string name="scale_hungarian_minor">hungarian minor</string>
+    <string name="scale_hungarian_major">hungarian major</string>
+    <string name="scale_blues">blues</string>
+    <string name="scale_pentatonic_major">pentatonic major</string>
+    <string name="scale_pentatonic_minor">pentatonic minor</string>
+    <string name="scale_spanish_eight">spanish eight</string>
+    <string name="scale_oriental">oriental</string>
+    <string name="scale_reduced">reduced</string>
+    <string name="scale_overtone">overtone</string>
+    <string name="scale_enigmatic">enigmatic</string>
+
+    <!-- ACCORD EXERCISE -->
     <string name="accords_title">accords</string>
     <string name="accords_heading">Train your accords!</string>
     <string name="accords_explanation">Work out the given accord.</string>
     <string name="accords_show_solution">show solution</string>
     <string name="accords_new_exercise">new accord</string>
-    <string name="accords_major_accord">Dur-Dreiklang</string>
-    <string name="accords_minor_accord">Moll-Dreiklang</string>
-    <string name="accords_dominant_seventh">Dominant-Septakkord</string>
-    <string name="accords_minor_seventh">Moll-Septakkord</string>
-    <string name="accords_major_seventh">Dur-Septakkord</string>
-    <string name="accords_major_added_second">major added second</string>
-    <string name="accords_minor_added_second">minor added second</string>
-    <string name="accords_major_sixth">major sixth</string>
-    <string name="accords_suspended">suspended</string>
-    <string name="accords_dominant_seventh_suspended_fourth">dominant seventh suspended fourth</string>
-    <string name="accords_suspended_second">suspended second</string>
-    <string name="accords_diminished">diminished</string>
-    <string name="accords_diminished_seventh">diminished seventh</string>
-    <string name="accords_augmented">augmented</string>
-    <string name="accords_minor_sixth">minor sixth</string>
-    <string name="accords_minor_seventh_flat_five">minor seventh flat five</string>
-    <string name="accords_minor_major_seventh">minor major seventh</string>
-    <string name="accords_dominant_seventh_flat_five">dominant seventh flat five</string>
-    <string name="accords_dominant_seventh_sharp_five">dominant seventh sharp five</string>
-    <string name="accords_major_seventh_flat_five">major seventh flat five</string>
-    <string name="accords_major_seventh_sharp_five">major seventh sharp five</string>
-    <string name="accords_six_nine">six nine</string>
-    <string name="accords_major_added_ninth">major added ninth</string>
-    <string name="accords_ninth">ninth</string>
-    <string name="accords_major_ninth">major ninth</string>
-    <string name="accords_minor_ninth">minor ninth</string>
-    <string name="accords_seventh_flat_nine">seventh flat nine</string>
-    <string name="accords_seventh_sharp_nine">seventh sharp nine</string>
-    <string name="accords_seventh_flat_five_flat_nine">seventh flat five flat nine</string>
-    <string name="accords_seventh_sharp_five_flat_nine">seventh sharp five flat nine</string>
-    <string name="accords_seventh_flat_five_sharp_nine">seventh flat five sharp nine</string>
-    <string name="accords_seventh_sharp_five_sharp_nine">seventh sharp five sharp nine</string>
-    <string name="accords_eleventh">eleventh</string>
-    <string name="accords_seventh_sharp_eleventh">seventh sharp eleventh</string>
-    <string name="accords_minor_eleventh">minor eleventh</string>
-    <string name="accords_thirteenth">thirteenth</string>
-    <string name="accords_minor_thirteenth">minor thirteenth</string>
+
+    <!-- ACCORD NAMES -->
+    <string name="accord_major_accord">Dur-Dreiklang</string>
+    <string name="accord_minor_accord">Moll-Dreiklang</string>
+    <string name="accord_dominant_seventh">Dominant-Septakkord</string>
+    <string name="accord_minor_seventh">Moll-Septakkord</string>
+    <string name="accord_major_seventh">Dur-Septakkord</string>
+    <string name="accord_major_added_second">major added second</string>
+    <string name="accord_minor_added_second">minor added second</string>
+    <string name="accord_major_sixth">major sixth</string>
+    <string name="accord_suspended">suspended</string>
+    <string name="accord_dominant_seventh_suspended_fourth">dominant seventh suspended fourth</string>
+    <string name="accord_suspended_second">suspended second</string>
+    <string name="accord_diminished">diminished</string>
+    <string name="accord_diminished_seventh">diminished seventh</string>
+    <string name="accord_augmented">augmented</string>
+    <string name="accord_minor_sixth">minor sixth</string>
+    <string name="accord_minor_seventh_flat_five">minor seventh flat five</string>
+    <string name="accord_minor_major_seventh">minor major seventh</string>
+    <string name="accord_dominant_seventh_flat_five">dominant seventh flat five</string>
+    <string name="accord_dominant_seventh_sharp_five">dominant seventh sharp five</string>
+    <string name="accord_major_seventh_flat_five">major seventh flat five</string>
+    <string name="accord_major_seventh_sharp_five">major seventh sharp five</string>
+    <string name="accord_six_nine">six nine</string>
+    <string name="accord_major_added_ninth">major added ninth</string>
+    <string name="accord_ninth">ninth</string>
+    <string name="accord_major_ninth">major ninth</string>
+    <string name="accord_minor_ninth">minor ninth</string>
+    <string name="accord_seventh_flat_nine">seventh flat nine</string>
+    <string name="accord_seventh_sharp_nine">seventh sharp nine</string>
+    <string name="accord_seventh_flat_five_flat_nine">seventh flat five flat nine</string>
+    <string name="accord_seventh_sharp_five_flat_nine">seventh sharp five flat nine</string>
+    <string name="accord_seventh_flat_five_sharp_nine">seventh flat five sharp nine</string>
+    <string name="accord_seventh_sharp_five_sharp_nine">seventh sharp five sharp nine</string>
+    <string name="accord_eleventh">eleventh</string>
+    <string name="accord_seventh_sharp_eleventh">seventh sharp eleventh</string>
+    <string name="accord_minor_eleventh">minor eleventh</string>
+    <string name="accord_thirteenth">thirteenth</string>
+    <string name="accord_minor_thirteenth">minor thirteenth</string>
 
     <!-- ADVANCED_FINGER_EXERCISE -->
     <string name="advanced_finger_exercise_title">advanced finger exercise</string>

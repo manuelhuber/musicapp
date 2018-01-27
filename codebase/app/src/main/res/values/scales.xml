@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="major">
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+    </integer-array>
+    <integer-array name="minor">
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <integer-array name="harmonic_minor">
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+    </integer-array>
+    <integer-array name="hungarian_minor">
+        <item>2</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+    </integer-array>
+    <integer-array name="hungarian_major">
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+    <integer-array name="blues">
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>2</item>
+    </integer-array>
+    <integer-array name="pentatonic_major">
+        <item>2</item>
+        <item>2</item>
+        <item>3</item>
+        <item>2</item>
+        <item>3</item>
+    </integer-array>
+    <integer-array name="pentatonic_minor">
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>3</item>
+        <item>2</item>
+    </integer-array>
+    <integer-array name="spanish_eight">
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+    </integer-array>
+    <integer-array name="oriental">
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+        <item>1</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+    <integer-array name="reduced">
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+    <integer-array name="overtone">
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+    <integer-array name="enigmatic">
+        <item>1</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+</resources>
