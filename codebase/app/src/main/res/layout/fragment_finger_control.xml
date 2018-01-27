@@ -6,7 +6,7 @@
     tools:context=".exercises.FingerControl">
 
     <Button
-        android:id="@+id/finger_control_button"
+        android:id="@+id/buttonFingerControl"
         android:layout_width="331dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"

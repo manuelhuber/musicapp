@@ -5,26 +5,25 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import de.manuel_huber.music.R
 import de.manuel_huber.music.model.Finger
 import de.manuel_huber.music.util.rndNumber
+import kotlinx.android.synthetic.main.fragment_finger_control.*
 
 class FingerControl : Fragment() {
-    private lateinit var button: Button
 
     override fun onCreateView(inflater: LayoutInflater?,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(R.layout.fragment_finger_control, container, false)
-        button = view.findViewById(R.id.finger_control_button)
-        button.setOnClickListener { getFingerString() }
+
+        buttonFingerControl.setOnClickListener { getFingerString() }
         getFingerString()
         return view
     }
 
     private fun getFingerString() {
-        button.text = getExercise()
+        buttonFingerControl.text = getExercise()
     }
 
     private fun getExercise(): String {
