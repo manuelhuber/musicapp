@@ -2,8 +2,8 @@ package de.manuel_huber.music.resources
 
 import android.content.Context
 import android.content.res.Resources
+import de.manuel_huber.music.model.Intervalls
 import de.manuel_huber.music.model.Note
-import de.manuel_huber.music.model.Scale
 import de.manuel_huber.music.util.getRandomElement
 
 val allScales
@@ -23,12 +23,12 @@ val allScales
             "enigmatic"
     )
 
-fun getRandomScale(resources: Resources, context: Context): Scale {
+fun getRandomScale(resources: Resources, context: Context): Intervalls {
     return getScale(allScales.getRandomElement(), resources, context)
 }
 
-fun getScale(name: String, resources: Resources, context: Context): Scale {
-    return Scale(
+fun getScale(name: String, resources: Resources, context: Context): Intervalls {
+    return Intervalls(
             getScaleString(name, resources, context)!!,
             getScaleSteps(name, resources, context)!!, Note())
 }

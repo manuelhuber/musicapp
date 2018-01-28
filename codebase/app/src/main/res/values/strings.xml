@@ -33,6 +33,7 @@
     <string name="scales_new_exercise">new exercise</string>
 
     <!-- SCALE NAMES -->
+    <string name="scale_composite">%1$s %2$s</string>
     <string name="scale_major">major</string>
     <string name="scale_minor">minor </string>
     <string name="scale_harmonic_minor">harmonic minor</string>
@@ -55,6 +56,7 @@
     <string name="accords_new_exercise">new accord</string>
 
     <!-- ACCORD NAMES -->
+    <string name="accord_composite">%1$s %2$s</string>
     <string name="accord_major_accord">Dur-Dreiklang</string>
     <string name="accord_minor_accord">Moll-Dreiklang</string>
     <string name="accord_dominant_seventh">Dominant-Septakkord</string>

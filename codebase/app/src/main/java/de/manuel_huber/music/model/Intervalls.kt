@@ -1,6 +1,6 @@
 package de.manuel_huber.music.model
 
-class Scale(val nameId: String, val steps: IntArray, var startingNote: Note) {
+class Intervalls(val nameId: String, val steps: IntArray, var startingNote: Note) {
 
     fun getNotes(): List<Note> {
         return steps.fold(mutableListOf(startingNote))
