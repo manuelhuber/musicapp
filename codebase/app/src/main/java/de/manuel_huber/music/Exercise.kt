@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import de.manuel_huber.music.exercises.Accords
 import de.manuel_huber.music.exercises.FingerControl
 import de.manuel_huber.music.exercises.Intervals
 import de.manuel_huber.music.exercises.Scales
@@ -11,7 +12,7 @@ import kotlinx.android.synthetic.main.content_exercise.*
 
 class Exercise : AppCompatActivity() {
 
-    val exercises: List<Fragment> = listOf(FingerControl(), Intervals(), Scales())
+    val exercises: List<Fragment> = listOf(FingerControl(), Intervals(), Scales(), Accords())
     private var currentExercise: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {

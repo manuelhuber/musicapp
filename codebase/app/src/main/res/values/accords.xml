@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="major_accord">
+        <item>4</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="minor_accord">
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="dominant_seventh">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="minor_seventh">
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="major_seventh">
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="major_added_second">
+        <item>2</item>
+        <item>2</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="minor_added_second">
+        <item>2</item>
+        <item>1</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="major_sixth">
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+    </integer-array>
+
+    <integer-array name="suspended">
+        <item>5</item>
+        <item>2</item>
+    </integer-array>
+
+    <integer-array name="dominant_seventh_suspended_fourth">
+        <item>5</item>
+        <item>2</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="suspended_second">
+        <item>2</item>
+        <item>5</item>
+    </integer-array>
+
+    <integer-array name="diminished">
+        <item>3</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="diminished_seventh">
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="augmented">
+        <item>4</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="minor_sixth">
+        <item>3</item>
+        <item>4</item>
+        <item>2</item>
+    </integer-array>
+
+    <integer-array name="minor_seventh_flat_five">
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="minor_major_seventh">
+        <item>3</item>
+        <item>4</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="dominant_seventh_flat_five">
+        <item>4</item>
+        <item>2</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="dominant_seventh_sharp_five">
+        <item>4</item>
+        <item>4</item>
+        <item>2</item>
+    </integer-array>
+
+    <integer-array name="major_seventh_flat_five">
+        <item>4</item>
+        <item>2</item>
+        <item>5</item>
+    </integer-array>
+
+    <integer-array name="major_seventh_sharp_five">
+
+        <item>4</item>
+        <item>4</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="six_nine">
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>5
+        </item>
+    </integer-array>
+
+    <integer-array name="major_added_ninth">
+        <item>4</item>
+        <item>3</item>
+        <item>7</item>
+    </integer-array>
+
+    <integer-array name="ninth">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="major_ninth">
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="minor_ninth">
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="seventh_flat_nine">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="seventh_sharp_nine">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>5</item>
+    </integer-array>
+
+    <integer-array name="seventh_flat_five_flat_nine">
+        <item>4</item>
+        <item>2</item>
+        <item>4</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="seventh_sharp_five_flat_nine">
+        <item>4</item>
+        <item>4</item>
+        <item>2</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="seventh_flat_five_sharp_nine">
+        <item>4</item>
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+    </integer-array>
+
+    <integer-array name="seventh_sharp_five_sharp_nine">
+        <item>4</item>
+        <item>4</item>
+        <item>2</item>
+        <item>5</item>
+    </integer-array>
+
+    <integer-array name="eleventh">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="seventh_sharp_eleventh">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="minor_eleventh">
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+    </integer-array>
+
+    <integer-array name="thirteenth">
+        <item>4</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="minor_thirteenth">
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+</resources>
