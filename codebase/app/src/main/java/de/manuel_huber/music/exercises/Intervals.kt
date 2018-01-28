@@ -15,14 +15,14 @@ class Intervals : Fragment() {
     private var note = Note()
     private var step = rndNumber(-11, 11)
 
-    override fun onCreateView(inflater: LayoutInflater?,
+    override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        super.onViewCreated(view, savedInstanceState)
-        return inflater!!.inflate(R.layout.fragment_intervals, container, false)
+        super.onCreateView(inflater, container, savedInstanceState)
+        return inflater.inflate(R.layout.fragment_intervals, container, false)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         textCurrentNote.text = note.toString()
         layoutIntervalCenter.setOnClickListener { newNote() }

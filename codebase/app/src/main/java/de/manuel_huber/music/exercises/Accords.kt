@@ -16,12 +16,13 @@ class Accords : Fragment() {
     private var state = -1
     private lateinit var accord: Intervalls
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater,
+                              container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater!!.inflate(R.layout.fragment_accords, container, false)
+        return inflater.inflate(R.layout.fragment_accords, container, false)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         layoutAccordsCenter.setOnClickListener { click() }
         click()
@@ -48,6 +49,6 @@ class Accords : Fragment() {
     }
 
     fun newAccord() {
-        accord = getRandomAccord(resources, context)
+        accord = getRandomAccord(resources, context!!)
     }
 }

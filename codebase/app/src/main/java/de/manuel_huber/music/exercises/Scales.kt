@@ -16,12 +16,13 @@ class Scales : Fragment() {
     private var state = -1
     private lateinit var scale: Intervalls
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater,
+                              container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater!!.inflate(R.layout.fragment_scales, container, false)
+        return inflater.inflate(R.layout.fragment_scales, container, false)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         layoutScalesCenter.setOnClickListener { click() }
         click()
@@ -48,6 +49,6 @@ class Scales : Fragment() {
     }
 
     fun newScale() {
-        scale = getRandomScale(resources, context);
+        scale = getRandomScale(resources, context!!);
     }
 }

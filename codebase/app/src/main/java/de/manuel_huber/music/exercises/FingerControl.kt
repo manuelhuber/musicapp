@@ -12,13 +12,13 @@ import kotlinx.android.synthetic.main.fragment_finger_control.*
 
 class FingerControl : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater?,
+    override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater!!.inflate(R.layout.fragment_finger_control, container, false)
+        return inflater.inflate(R.layout.fragment_finger_control, container, false)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         buttonFingerControl.setOnClickListener { getFingerString() }
         getFingerString()
