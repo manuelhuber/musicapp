@@ -10,7 +10,7 @@ import de.manuel_huber.music.model.Note
 import de.manuel_huber.music.util.rndNumber
 import kotlinx.android.synthetic.main.fragment_intervals.*
 
-class Intervals : Fragment() {
+class IntervalsFragment : Fragment() {
 
     private var note = Note()
     private var step = rndNumber(-11, 11)
@@ -49,6 +49,12 @@ class Intervals : Fragment() {
 
             textStepsUp.text = ""
             imageStepsUp.visibility = View.INVISIBLE
+        }
+    }
+
+    companion object {
+        fun newInstance(): IntervalsFragment {
+            return IntervalsFragment()
         }
     }
 }

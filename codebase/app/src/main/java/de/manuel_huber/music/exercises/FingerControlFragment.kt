@@ -10,7 +10,7 @@ import de.manuel_huber.music.model.Finger
 import de.manuel_huber.music.util.rndNumber
 import kotlinx.android.synthetic.main.fragment_finger_control.*
 
-class FingerControl : Fragment() {
+class FingerControlFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
@@ -45,5 +45,12 @@ class FingerControl : Fragment() {
 
     private fun getNumberOfFingers(): Int {
         return rndNumber(1, 5)
+    }
+
+
+    companion object {
+        fun newInstance(): FingerControlFragment {
+            return FingerControlFragment()
+        }
     }
 }

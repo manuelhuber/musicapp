@@ -11,7 +11,7 @@ import de.manuel_huber.music.model.Intervalls
 import de.manuel_huber.music.resources.getRandomAccord
 import kotlinx.android.synthetic.main.fragment_accords.*
 
-class Accords : Fragment() {
+class AccordsFragment : Fragment() {
 
     private var state = -1
     private lateinit var accord: Intervalls
@@ -50,5 +50,11 @@ class Accords : Fragment() {
 
     fun newAccord() {
         accord = getRandomAccord(resources, context!!)
+    }
+
+    companion object {
+        fun newInstance(): AccordsFragment {
+            return AccordsFragment()
+        }
     }
 }

@@ -4,7 +4,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="de.manuel_huber.music.exercises.Scales"
+    tools:context="de.manuel_huber.music.exercises.ScalesFragment"
     tools:layout_editor_absoluteX="8dp"
     tools:layout_editor_absoluteY="8dp">
 

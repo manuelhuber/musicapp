@@ -11,7 +11,7 @@ import de.manuel_huber.music.model.Intervalls
 import de.manuel_huber.music.resources.getRandomScale
 import kotlinx.android.synthetic.main.fragment_scales.*
 
-class Scales : Fragment() {
+class ScalesFragment : Fragment() {
 
     private var state = -1
     private lateinit var scale: Intervalls
@@ -50,5 +50,11 @@ class Scales : Fragment() {
 
     fun newScale() {
         scale = getRandomScale(resources, context!!);
+    }
+
+    companion object {
+        fun newInstance(): ScalesFragment {
+            return ScalesFragment()
+        }
     }
 }
