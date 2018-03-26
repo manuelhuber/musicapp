@@ -2,12 +2,36 @@ package de.manuel_huber.music.model
 
 import de.manuel_huber.music.util.rndNumber
 
+enum class Sign {
+    None,
+    Flat,
+    Sharp
+}
+
 class Note(private var note: Int = rndNumber(0, 11)) {
 
     fun steps(steps: Int): Note {
         var newNote: Int = note + steps
         while (newNote < 0) newNote += 12;
         return Note(Math.abs(newNote) % 12)
+    }
+
+    fun positionOnStaff(): List<Pair<Int, Sign>> {
+        return when (note) {
+            0 -> listOf(Pair(0, Sign.None))
+            1 -> listOf(Pair(0, Sign.Sharp), Pair(1, Sign.Flat))
+            2 -> listOf(Pair(1, Sign.None))
+            3 -> listOf(Pair(2, Sign.None))
+            4 -> listOf(Pair(2, Sign.Sharp), Pair(3, Sign.Flat))
+            5 -> listOf(Pair(3, Sign.None))
+            6 -> listOf(Pair(3, Sign.Sharp), Pair(4, Sign.Flat))
+            7 -> listOf(Pair(4, Sign.None))
+            8 -> listOf(Pair(5, Sign.None))
+            9 -> listOf(Pair(5, Sign.Sharp), Pair(6, Sign.Flat))
+            10 -> listOf(Pair(6, Sign.None))
+            11 -> listOf(Pair(6, Sign.Sharp), Pair(0, Sign.Flat))
+            else -> listOf()
+        }
     }
 
     override fun toString(): String {

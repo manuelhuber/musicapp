@@ -12,31 +12,60 @@
 
         <ImageView
             android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="220dp"
+            android:layout_height="250dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="7dp"
-            android:src="@drawable/f_key"
+            android:src="@drawable/ic_staff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.253" />
 
         <ImageView
             android:id="@+id/noteImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageView1"
+            android:layout_alignRight="@+id/imageView1"
             android:layout_alignTop="@+id/imageView1"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="51dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginTop="80.5dp"
             android:src="@drawable/note"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/flatImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/noteImage"
+            android:layout_toLeftOf="@+id/noteImage"
+            android:layout_toStartOf="@+id/noteImage"
+            android:src="@drawable/diminish" />
+
+        <ImageView
+            android:id="@+id/sharpImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/noteImage"
+            android:layout_marginBottom="-7dp"
+            android:layout_toLeftOf="@+id/noteImage"
+            android:layout_toStartOf="@+id/noteImage"
+            android:src="@drawable/sharp" />
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="243dp" />
 
 </android.support.constraint.ConstraintLayout>

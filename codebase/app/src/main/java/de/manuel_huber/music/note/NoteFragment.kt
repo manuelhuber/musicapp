@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.MarginLayoutParams
 import de.manuel_huber.music.R
+import de.manuel_huber.music.model.Note
+import de.manuel_huber.music.model.Sign
 import kotlinx.android.synthetic.main.fragment_note.*
 
 /**
@@ -23,7 +25,7 @@ class NoteFragment : Fragment() {
 
     var update = false
 
-    var note: Int = 0
+    var note: Note = Note()
         set(value) {
             field = value
             update()
@@ -32,7 +34,7 @@ class NoteFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (arguments != null) {
-            note = arguments!!.getInt(ARG_NOTE)
+            note = Note(arguments!!.getInt(ARG_NOTE))
         }
     }
 
@@ -41,6 +43,7 @@ class NoteFragment : Fragment() {
         marginParams = noteImage.layoutParams as MarginLayoutParams
         density = context?.resources?.displayMetrics?.densityDpi!!.toFloat()
         if (update) update()
+        button3.setOnClickListener { v -> note = note.steps(1) }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -53,15 +56,20 @@ class NoteFragment : Fragment() {
             update = true
             return
         }
-        marginParams.topMargin = Math.ceil((POSITION_OF_A_DP + note * NOTE_DISTANCE_DP) *
+        val position = note.positionOnStaff()[0]
+        sharpImage.visibility = if (position.second == Sign.Sharp) View.VISIBLE else View.INVISIBLE
+        flatImage.visibility = if (position.second == Sign.Flat) View.VISIBLE else View.INVISIBLE
+        val octaveMod = if (Math.random() < 0.5) -7 else 0
+        val positionDelta = position.first + octaveMod
+        marginParams.topMargin = Math.ceil((POSITION_OF_A_DP - positionDelta * NOTE_DISTANCE_DP) *
                 (density / DisplayMetrics.DENSITY_DEFAULT)).toInt()
-
+        noteImage.layoutParams = marginParams
     }
 
     companion object {
         private const val ARG_NOTE = "note"
-        private const val NOTE_DISTANCE_DP = 10.75
-        private const val POSITION_OF_A_DP = 62.5
+        private const val NOTE_DISTANCE_DP = 12
+        private const val POSITION_OF_A_DP = 104.5
         fun newInstance(note: Int): NoteFragment {
             val fragment = NoteFragment()
             val args = Bundle()
