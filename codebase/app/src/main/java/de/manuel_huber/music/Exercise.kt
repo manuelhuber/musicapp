@@ -4,15 +4,13 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import de.manuel_huber.music.exercises.AccordsFragment
-import de.manuel_huber.music.exercises.FingerControlFragment
-import de.manuel_huber.music.exercises.IntervalsFragment
-import de.manuel_huber.music.exercises.ScalesFragment
+import de.manuel_huber.music.exercises.*
 import kotlinx.android.synthetic.main.content_exercise.*
 
 class Exercise : AppCompatActivity() {
 
     val exercises: List<Fragment> = listOf(
+            NoteReadingFragment.newInstance(),
             FingerControlFragment.newInstance(),
             IntervalsFragment.newInstance(),
             ScalesFragment.newInstance(),

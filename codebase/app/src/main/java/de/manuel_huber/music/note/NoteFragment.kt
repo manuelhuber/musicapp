@@ -20,16 +20,15 @@ import kotlinx.android.synthetic.main.fragment_note.*
  */
 class NoteFragment : Fragment() {
 
-    private lateinit var marginParams: MarginLayoutParams
-    private var density: Float = 0.0f
-
-    var update = false
-
     var note: Note = Note()
         set(value) {
             field = value
             update()
         }
+
+    private lateinit var marginParams: MarginLayoutParams
+    private var density: Float = 0.0f
+    private var update = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +42,6 @@ class NoteFragment : Fragment() {
         marginParams = noteImage.layoutParams as MarginLayoutParams
         density = context?.resources?.displayMetrics?.densityDpi!!.toFloat()
         if (update) update()
-        button3.setOnClickListener { v -> note = note.steps(1) }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -59,7 +57,7 @@ class NoteFragment : Fragment() {
         val position = note.positionOnStaff()[0]
         sharpImage.visibility = if (position.second == Sign.Sharp) View.VISIBLE else View.INVISIBLE
         flatImage.visibility = if (position.second == Sign.Flat) View.VISIBLE else View.INVISIBLE
-        val octaveMod = if (Math.random() < 0.5) -7 else 0
+        val octaveMod = if (Math.random() < 0.5) 0 else 0
         val positionDelta = position.first + octaveMod
         marginParams.topMargin = Math.ceil((POSITION_OF_A_DP - positionDelta * NOTE_DISTANCE_DP) *
                 (density / DisplayMetrics.DENSITY_DEFAULT)).toInt()
@@ -69,7 +67,7 @@ class NoteFragment : Fragment() {
     companion object {
         private const val ARG_NOTE = "note"
         private const val NOTE_DISTANCE_DP = 12
-        private const val POSITION_OF_A_DP = 102.25
+        private const val POSITION_OF_A_DP = 126.25
         fun newInstance(note: Int): NoteFragment {
             val fragment = NoteFragment()
             val args = Bundle()

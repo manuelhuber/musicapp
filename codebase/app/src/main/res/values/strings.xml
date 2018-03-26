@@ -13,6 +13,9 @@
     <string name="settings">settings</string>
     <string name="automatic_next">New exercise every</string>
 
+
+    <string name="show_solution">Show solution</string>
+
     <!-- FINGER CONTROL -->
     <string name="finger_control_title">finger control</string>
     <string name="finger_control_heading">Can you control your fingers?</string>
