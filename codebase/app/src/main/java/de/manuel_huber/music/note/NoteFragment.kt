@@ -69,7 +69,7 @@ class NoteFragment : Fragment() {
     companion object {
         private const val ARG_NOTE = "note"
         private const val NOTE_DISTANCE_DP = 12
-        private const val POSITION_OF_A_DP = 104.5
+        private const val POSITION_OF_A_DP = 102.25
         fun newInstance(note: Int): NoteFragment {
             val fragment = NoteFragment()
             val args = Bundle()
