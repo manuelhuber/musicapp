@@ -1,26 +1,15 @@
 package de.manuel_huber.music.model
 
-import de.manuel_huber.music.util.rndNumber
-
-/**
- * Finger
- * 0 = thumb
- * 4 = pinky
- *
- * Hand
- * 0 = left
- * 1 = right
- */
-
-class Finger constructor(val finger: Int = rndNumber(0, 4), val hand: Int = rndNumber(0, 1)) {
+class Finger constructor(val finger: FingerPosition = FingerPosition.randomSingleFinger(),
+                         val hand: Hand = Hand.randomHand()) {
     /**
      * Format: {{Hand}}{{Finger}}
      * Hand is either 'L' or 'R'
      * Finger is the number as defined in the Finger class plus 1 (since normal people don't like zero indexing)
      */
     override fun toString(): String {
-        var s: String = if (this.hand == 0) "L" else "R"
-        s += (this.finger + 1)
+        var s: String = if (this.hand == Hand.Left) "L" else "R"
+        s += (this.finger.ordinal + 1)
         return s
     }
 
@@ -32,9 +21,7 @@ class Finger constructor(val finger: Int = rndNumber(0, 4), val hand: Int = rndN
     }
 
     override fun hashCode(): Int {
-        var result = finger
-        result = 31 * result + hand
-        return result
+        return 31 * finger.ordinal + hand.ordinal
     }
 
     companion object : Comparator<Finger> {
@@ -48,7 +35,7 @@ class Finger constructor(val finger: Int = rndNumber(0, 4), val hand: Int = rndN
             } else if (a.hand > b.hand) {
                 1
             } else {
-                if (a.hand == 0) b.finger - a.finger else a.finger - b.finger
+                if (a.hand == Hand.Left) b.finger.compareTo(a.finger) else a.finger.compareTo(b.finger)
             }
         }
     }
