@@ -1,44 +1,44 @@
 package de.manuel_huber.music.model
 
+import de.manuel_huber.music.util.loopWithin
 import de.manuel_huber.music.util.rndNumber
+import java.io.Serializable
 
-enum class Sign {
-    None,
-    Flat,
-    Sharp
-}
+class Note(note: Int = rndNumber(0, 11), var decrease: Boolean = false, var octave: Int = 0) : Serializable {
 
-class Note(private var note: Int = rndNumber(0, 11)) {
+    var note = note
+        set(value) {
+            field = loopWithin(0, 11, value)
+        }
 
     fun steps(steps: Int): Note {
-        var newNote: Int = note + steps
-        while (newNote < 0) newNote += 12;
-        return Note(Math.abs(newNote) % 12)
+        return Note(loopWithin(0, 11, steps + note))
     }
 
-    fun positionOnStaff(): List<Pair<Int, Sign>> {
-        return when (note) {
-            0 -> listOf(Pair(0, Sign.None))
-            1 -> listOf(Pair(0, Sign.Sharp), Pair(1, Sign.Flat))
-            2 -> listOf(Pair(1, Sign.None))
-            3 -> listOf(Pair(2, Sign.None))
-            4 -> listOf(Pair(2, Sign.Sharp), Pair(3, Sign.Flat))
-            5 -> listOf(Pair(3, Sign.None))
-            6 -> listOf(Pair(3, Sign.Sharp), Pair(4, Sign.Flat))
-            7 -> listOf(Pair(4, Sign.None))
-            8 -> listOf(Pair(5, Sign.None))
-            9 -> listOf(Pair(5, Sign.Sharp), Pair(6, Sign.Flat))
-            10 -> listOf(Pair(6, Sign.None))
-            11 -> listOf(Pair(6, Sign.Sharp), Pair(0, Sign.Flat))
-            else -> listOf()
+    fun positionOnStaff(): Pair<Int, Sign> {
+        val pair = when (note) {
+            0 -> (Pair(0, Sign.None))
+            1 -> if (decrease) Pair(1, Sign.Flat) else Pair(0, Sign.Sharp)
+            2 -> (Pair(1, Sign.None))
+            3 -> (Pair(2, Sign.None))
+            4 -> if (decrease) Pair(3, Sign.Flat) else Pair(2, Sign.Sharp)
+            5 -> (Pair(3, Sign.None))
+            6 -> if (decrease) Pair(4, Sign.Flat) else Pair(3, Sign.Sharp)
+            7 -> (Pair(4, Sign.None))
+            8 -> (Pair(5, Sign.None))
+            9 -> if (decrease) Pair(6, Sign.Flat) else Pair(5, Sign.Sharp)
+            10 -> (Pair(6, Sign.None))
+            11 -> if (decrease) Pair(0, Sign.Flat) else Pair(6, Sign.Sharp)
+            else -> throw Error("Note")
         }
+        return pair.copy(pair.first + octave * 7)
     }
 
     override fun toString(): String {
         return noteToString()
     }
 
-    private fun noteToString(decrease: Boolean = false): String {
+    private fun noteToString(): String {
         val saveNote: Int = Math.abs(note) % 12
         return when (saveNote) {
             0 -> "A"

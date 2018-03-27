@@ -33,7 +33,7 @@ class NoteFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (arguments != null) {
-            note = Note(arguments!!.getInt(ARG_NOTE))
+            note = arguments!!.getSerializable(ARG_NOTE) as Note
         }
     }
 
@@ -54,12 +54,10 @@ class NoteFragment : Fragment() {
             update = true
             return
         }
-        val position = note.positionOnStaff()[0]
+        val position = note.positionOnStaff()
         sharpImage.visibility = if (position.second == Sign.Sharp) View.VISIBLE else View.INVISIBLE
         flatImage.visibility = if (position.second == Sign.Flat) View.VISIBLE else View.INVISIBLE
-        val octaveMod = if (Math.random() < 0.5) 0 else 0
-        val positionDelta = position.first + octaveMod
-        marginParams.topMargin = Math.ceil((POSITION_OF_A_DP - positionDelta * NOTE_DISTANCE_DP) *
+        marginParams.topMargin = Math.ceil((POSITION_OF_A_DP - position.first * NOTE_DISTANCE_DP) *
                 (density / DisplayMetrics.DENSITY_DEFAULT)).toInt()
         noteImage.layoutParams = marginParams
     }
@@ -68,10 +66,10 @@ class NoteFragment : Fragment() {
         private const val ARG_NOTE = "note"
         private const val NOTE_DISTANCE_DP = 12
         private const val POSITION_OF_A_DP = 126.25
-        fun newInstance(note: Int): NoteFragment {
+        fun newInstance(note: Note): NoteFragment {
             val fragment = NoteFragment()
             val args = Bundle()
-            args.putInt(ARG_NOTE, note)
+            args.putSerializable(ARG_NOTE, note)
             fragment.arguments = args
             return fragment
         }

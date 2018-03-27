@@ -6,13 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.manuel_huber.music.R
+import de.manuel_huber.music.model.Note
 import de.manuel_huber.music.note.NoteFragment
+import de.manuel_huber.music.util.rndBool
 import kotlinx.android.synthetic.main.fragment_note_reading.*
 
 class NoteReadingFragment : Fragment() {
 
     private lateinit var noteDisplay: NoteFragment
-    private var showSolution = false
+    private var showSolution = true
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -23,19 +25,23 @@ class NoteReadingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         button3.setOnClickListener { click() }
 
-        noteDisplay = NoteFragment.newInstance(0)
+        noteDisplay = NoteFragment.newInstance(Note())
         childFragmentManager.beginTransaction()
                 .add(noteFragment.id, noteDisplay)
                 .commit()
 
         super.onViewCreated(view, savedInstanceState)
+
     }
 
     private fun click() {
         if (showSolution) {
             button3.text = noteDisplay.note.toString()
         } else {
-            noteDisplay.note = noteDisplay.note.steps(1)
+            val note = Note()
+            note.decrease = rndBool()
+            note.octave = if (rndBool()) 0 else -1
+            noteDisplay.note = note
             button3.text = resources.getString(R.string.show_solution)
         }
         showSolution = !showSolution

@@ -24,6 +24,7 @@ class UtilKtTest {
         assertEquals(12, loopWithin(0, 12, -1))
         assertEquals(12, loopWithin(1, 12, 0))
         assertEquals(11, loopWithin(0, 12, -2))
+        assertEquals(0, loopWithin(0, 11, -12))
 
         assertEquals(12, loopWithin(11, 12, 10))
         assertEquals(12, loopWithin(11, 12, 8))

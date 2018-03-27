@@ -8,6 +8,10 @@ fun rndNumber(min: Int, max: Int): Int {
     return random.nextInt(max - min + 1) + min
 }
 
+fun rndBool(): Boolean {
+    return random.nextBoolean()
+}
+
 /**
  * Maps the number to another number in the given range
  * Values that are higher than the maximum start at the minimum again.
