@@ -32,5 +32,5 @@ fun loopWithin(min: Int, max: Int, value: Int): Int {
     }
 }
 
-fun <E> List<E>.getRandomElement() = this[rndNumber(0, this.size)]
-fun <E> Array<E>.getRandomElement() = this[rndNumber(0, this.size)]
+fun <E> List<E>.getRandomElement() = this[rndNumber(0, this.size - 1)]
+fun <E> Array<E>.getRandomElement() = this[rndNumber(0, this.size - 1)]
