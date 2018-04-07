@@ -14,7 +14,7 @@ class Exercise : AppCompatActivity() {
             FingerControlFragment.newInstance(),
             IntervalsFragment.newInstance(),
             ScalesFragment.newInstance(),
-            AccordsFragment.newInstance()
+            AccordsExerciseFragment.newInstance()
     )
 
     private var currentExercise: Int = 0

@@ -9,10 +9,14 @@ import android.view.ViewGroup
 import de.manuel_huber.music.R
 import de.manuel_huber.music.model.Intervals
 import de.manuel_huber.music.resources.getRandomAccord
-import kotlinx.android.synthetic.main.fragment_accords.*
+import kotlinx.android.synthetic.main.fragment_accords_exercise.*
 
-
-class AccordsFragment : Fragment() {
+/**
+ * Displays the accord exercise.
+ * Shows a note and an accord name, then the intervals of the accord and then the actual notes
+ * Accords are chosen completely at random
+ */
+class AccordsExerciseFragment : Fragment() {
 
     private var next = NextShow.NOTE
     private lateinit var accord: Intervals
@@ -20,13 +24,13 @@ class AccordsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_accords, container, false)
+        return inflater.inflate(R.layout.fragment_accords_exercise, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        layoutAccordsCenter.setOnClickListener { click() }
-        click()
+        layoutExerciseButton.setOnClickListener { click() }
+        showNote()
     }
 
     private fun click() {
@@ -56,8 +60,8 @@ class AccordsFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(): AccordsFragment {
-            return AccordsFragment()
+        fun newInstance(): AccordsExerciseFragment {
+            return AccordsExerciseFragment()
         }
     }
 
