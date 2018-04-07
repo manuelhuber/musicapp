@@ -103,4 +103,7 @@
     <string name="advanced_finger_exercise_heading">Can you control your fingers?</string>
     <string name="advanced_finger_exercise_explanation">Press the fingers in the given order (1 = thumb, 5 = pinky) as if you were playing on a piano. Try to hold each finger for the same amount of time. Repeat until you no longer feel any resistance in your muscles.</string>
     <string name="advanced_finger_exercise_difficulty">maximum count:</string>
+
+    <!---->
+    <string name="title_activity_single_fragement">SingleFragementActivity</string>
 </resources>

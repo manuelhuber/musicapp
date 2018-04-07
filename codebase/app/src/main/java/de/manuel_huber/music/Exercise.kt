@@ -12,7 +12,7 @@ class Exercise : AppCompatActivity() {
     val exercises: List<Fragment> = listOf(
             NoteReadingFragment.newInstance(),
             FingerControlExerciseFragment.newInstance(),
-            IntervalsFragment.newInstance(),
+            IntervalsExerciseFragment.newInstance(),
             ScalesFragment.newInstance(),
             AccordsExerciseFragment.newInstance()
     )

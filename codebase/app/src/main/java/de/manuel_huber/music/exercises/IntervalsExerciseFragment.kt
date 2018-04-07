@@ -8,18 +8,19 @@ import android.view.ViewGroup
 import de.manuel_huber.music.R
 import de.manuel_huber.music.model.Note
 import de.manuel_huber.music.util.rndNumber
-import kotlinx.android.synthetic.main.fragment_intervals.*
+import kotlinx.android.synthetic.main.fragment_intervals_exercise.*
 
-class IntervalsFragment : Fragment() {
+class IntervalsExerciseFragment : Fragment() {
 
     private var note = Note()
     private var step = rndNumber(-11, 11)
+    private var previousStep = 0
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        return inflater.inflate(R.layout.fragment_intervals, container, false)
+        return inflater.inflate(R.layout.fragment_intervals_exercise, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -36,7 +37,7 @@ class IntervalsFragment : Fragment() {
     }
 
     private fun updateButtons() {
-        do step = rndNumber(-11, 11) while (step == 0)
+        do step = rndNumber(-11, 11) while (step == 0 || step == -previousStep)
         if (step > 0) {
             textStepsUp.text = step.toString()
             imageStepsUp.visibility = View.VISIBLE
@@ -53,8 +54,8 @@ class IntervalsFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(): IntervalsFragment {
-            return IntervalsFragment()
+        fun newInstance(): IntervalsExerciseFragment {
+            return IntervalsExerciseFragment()
         }
     }
 }
