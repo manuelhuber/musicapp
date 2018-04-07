@@ -18,14 +18,13 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class AccordsExerciseFragmentTest {
 
-    private val testActivityRule = ActivityTestRule(SingleFragmentActivity::class.java, true, true)
-
     @Rule
-    fun rule() = testActivityRule
+    @JvmField
+    val testActivityRule = ActivityTestRule(SingleFragmentActivity::class.java, true, true)
 
     @Before
     fun setUp() {
-        rule().activity.setFragment(AccordsExerciseFragment.newInstance())
+        testActivityRule.activity.setFragment(AccordsExerciseFragment.newInstance())
     }
 
     @Test
