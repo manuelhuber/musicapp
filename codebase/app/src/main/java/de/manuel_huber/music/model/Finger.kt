@@ -5,7 +5,7 @@ class Finger constructor(val finger: FingerPosition = FingerPosition.randomSingl
     /**
      * Format: {{Hand}}{{Finger}}
      * Hand is either 'L' or 'R'
-     * Finger is the number as defined in the Finger class plus 1 (since normal people don't like zero indexing)
+     * Finger is the number as defined in @FingerPosition plus 1 (since normal people don't like zero indexing)
      */
     override fun toString(): String {
         var s: String = if (this.hand == Hand.Left) "L" else "R"
@@ -26,14 +26,13 @@ class Finger constructor(val finger: FingerPosition = FingerPosition.randomSingl
 
     companion object : Comparator<Finger> {
         /**
-         * Sort fingers from left to right when holding them straight out, hand backside towards you.
+         * Sort fingers from left to right just as they are when holding both hands straight out,
+         * hand backside towards you. This means:
          * Left Pinky < Left Thumb < Right Thumb < Right Pinky
          */
         override fun compare(a: Finger, b: Finger): Int {
-            return if (a.hand < b.hand) {
-                -1
-            } else if (a.hand > b.hand) {
-                1
+            return if (a.hand !== b.hand) {
+                a.hand.compareTo(b.hand)
             } else {
                 if (a.hand == Hand.Left) b.finger.compareTo(a.finger) else a.finger.compareTo(b.finger)
             }

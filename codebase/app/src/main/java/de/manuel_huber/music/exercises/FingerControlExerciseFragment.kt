@@ -8,23 +8,27 @@ import android.view.ViewGroup
 import de.manuel_huber.music.R
 import de.manuel_huber.music.model.Finger
 import de.manuel_huber.music.util.rndNumber
-import kotlinx.android.synthetic.main.fragment_finger_control.*
+import kotlinx.android.synthetic.main.fragment_finger_control_exercise.*
 
-class FingerControlFragment : Fragment() {
+/**
+ * Displays the finger control exercise
+ * Shows a series of fingers which the user has to move
+ */
+class FingerControlExerciseFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_finger_control, container, false)
+        return inflater.inflate(R.layout.fragment_finger_control_exercise, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        buttonFingerControl.setOnClickListener { getFingerString() }
-        getFingerString()
+        buttonFingerControl.setOnClickListener { nextExercise() }
+        nextExercise()
     }
 
-    private fun getFingerString() {
+    private fun nextExercise() {
         buttonFingerControl.text = getExercise()
     }
 
@@ -49,8 +53,8 @@ class FingerControlFragment : Fragment() {
 
 
     companion object {
-        fun newInstance(): FingerControlFragment {
-            return FingerControlFragment()
+        fun newInstance(): FingerControlExerciseFragment {
+            return FingerControlExerciseFragment()
         }
     }
 }
