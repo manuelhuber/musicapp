@@ -1,8 +1,11 @@
 package de.manuel_huber.music.model
 
-class Intervalls(val nameId: String, val steps: IntArray, var startingNote: Note) {
+/**
+ * A series of intervals which can represent an accord or a scale
+ */
+class Intervals(val nameId: String, val steps: IntArray, var startingNote: Note) {
 
-    fun getNotes(): List<Note> {
+    private fun getNotes(): List<Note> {
         return steps.fold(mutableListOf(startingNote))
         { acc: MutableList<Note>, steps: Int ->
             acc.add(acc.last().steps(steps))

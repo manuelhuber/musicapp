@@ -7,14 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.manuel_huber.music.R
-import de.manuel_huber.music.model.Intervalls
+import de.manuel_huber.music.model.Intervals
 import de.manuel_huber.music.resources.getRandomScale
 import kotlinx.android.synthetic.main.fragment_scales.*
 
 class ScalesFragment : Fragment() {
 
     private var state = -1
-    private lateinit var scale: Intervalls
+    private lateinit var scale: Intervals
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
@@ -42,7 +42,7 @@ class ScalesFragment : Fragment() {
                 textSteps.text = ""
                 textScale.text = ""
                 newScale()
-                textNote.text = resources.getString(R.string.accord_composite, scale.startingNote, scale.nameId)
+                textExercise.text = resources.getString(R.string.accord_composite, scale.startingNote, scale.nameId)
                 state = 0
             }
         }
