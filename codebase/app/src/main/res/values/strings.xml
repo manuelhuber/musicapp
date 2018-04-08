@@ -1,5 +1,9 @@
 <resources>
 
+    <!-- COMMON -->
+    <string name="interval_series_composite">%1$s %2$s</string>
+
+    <!---->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_exercise">Exercise</string>
     <string name="action_settings">Settings</string>
@@ -59,7 +63,6 @@
     <string name="accords_new_exercise">new accord</string>
 
     <!-- ACCORD NAMES -->
-    <string name="accord_composite">%1$s %2$s</string>
     <string name="accord_major_accord">Dur-Dreiklang</string>
     <string name="accord_minor_accord">Moll-Dreiklang</string>
     <string name="accord_dominant_seventh">Dominant-Septakkord</string>
