@@ -4,7 +4,7 @@
     android:id="@+id/frameLayout2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context="de.manuel_huber.music.note.NoteFragment">
+    tools:context="de.manuelhuber.music.note.NoteFragment">
 
     <RelativeLayout
         android:layout_width="wrap_content"
