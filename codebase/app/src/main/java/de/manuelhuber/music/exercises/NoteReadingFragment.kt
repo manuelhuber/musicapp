@@ -37,7 +37,8 @@ class NoteReadingFragment : Fragment() {
         if (showSolution) {
             exerciseButton.text = noteDisplay.note.toString()
         } else {
-            val note = Note()
+            var note: Note
+            do note = Note() while (note != noteDisplay.note)
             note.decrease = rndBool()
             note.octave = if (rndBool()) 0 else -1
             noteDisplay.note = note
