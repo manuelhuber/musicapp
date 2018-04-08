@@ -17,18 +17,30 @@ class Note(note: Int = rndNumber(0, 11), var decrease: Boolean = false, var octa
 
     fun positionOnStaff(): Pair<Int, Sign> {
         val pair = when (note) {
+        // C
             0 -> (Pair(0, Sign.None))
+        // C# Db
             1 -> if (decrease) Pair(1, Sign.Flat) else Pair(0, Sign.Sharp)
+        // D
             2 -> (Pair(1, Sign.None))
-            3 -> (Pair(2, Sign.None))
-            4 -> if (decrease) Pair(3, Sign.Flat) else Pair(2, Sign.Sharp)
+        // D# Eb
+            3 -> if (decrease) Pair(2, Sign.Flat) else Pair(1, Sign.Sharp)
+        // E
+            4 -> (Pair(2, Sign.None))
+        // F
             5 -> (Pair(3, Sign.None))
+        // F# Gb
             6 -> if (decrease) Pair(4, Sign.Flat) else Pair(3, Sign.Sharp)
+        // G
             7 -> (Pair(4, Sign.None))
-            8 -> (Pair(5, Sign.None))
-            9 -> if (decrease) Pair(6, Sign.Flat) else Pair(5, Sign.Sharp)
-            10 -> (Pair(6, Sign.None))
-            11 -> if (decrease) Pair(0, Sign.Flat) else Pair(6, Sign.Sharp)
+        // G# Ab
+            8 -> if (decrease) Pair(5, Sign.Flat) else Pair(4, Sign.Sharp)
+        // A
+            9 -> (Pair(5, Sign.None))
+        // A# Bb
+            10 -> if (decrease) Pair(6, Sign.Flat) else Pair(5, Sign.Sharp)
+        // B
+            11 -> (Pair(6, Sign.None))
             else -> throw Error("Note")
         }
         return pair.copy(pair.first + octave * 7)
@@ -41,18 +53,18 @@ class Note(note: Int = rndNumber(0, 11), var decrease: Boolean = false, var octa
     private fun noteToString(): String {
         val saveNote: Int = Math.abs(note) % 12
         return when (saveNote) {
-            0 -> "A"
-            1 -> if (decrease) "Bb" else "A#"
-            2 -> "B"
-            3 -> "C"
-            4 -> if (decrease) "Db" else "C#"
-            5 -> "D"
-            6 -> if (decrease) "Eb" else "D#"
-            7 -> "E"
-            8 -> "F"
-            9 -> if (decrease) "Gb" else "F#"
-            10 -> "G"
-            11 -> if (decrease) "Ab" else "G#"
+            0 -> "C"
+            1 -> if (decrease) "Db" else "C#"
+            2 -> "D"
+            3 -> if (decrease) "Eb" else "D#"
+            4 -> "E"
+            5 -> "F"
+            6 -> if (decrease) "Gb" else "F#"
+            7 -> "G"
+            8 -> if (decrease) "Ab" else "G#"
+            9 -> "A"
+            10 -> if (decrease) "Bb" else "A#"
+            11 -> "B"
             else -> "Error"
         }
     }

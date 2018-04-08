@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_note_reading.*
  */
 class NoteReadingFragment : Fragment() {
 
-    private lateinit var noteFragment: NoteFragment
+    private lateinit var noteDisplay: NoteFragment
     private var showSolution = true
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -26,21 +26,21 @@ class NoteReadingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         exerciseButton.setOnClickListener { click() }
-        noteFragment = NoteFragment.newInstance(Note())
+        noteDisplay = NoteFragment.newInstance(Note())
         childFragmentManager.beginTransaction()
-                .add(noteFragment.id, noteFragment)
+                .add(noteFragment.id, noteDisplay)
                 .commit()
         super.onViewCreated(view, savedInstanceState)
     }
 
     private fun click() {
         if (showSolution) {
-            exerciseButton.text = noteFragment.note.toString()
+            exerciseButton.text = noteDisplay.note.toString()
         } else {
             val note = Note()
             note.decrease = rndBool()
             note.octave = if (rndBool()) 0 else -1
-            noteFragment.note = note
+            noteDisplay.note = note
             exerciseButton.text = resources.getString(R.string.show_solution)
         }
         showSolution = !showSolution

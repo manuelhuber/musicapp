@@ -57,7 +57,7 @@ class NoteFragment : Fragment() {
         val position = note.positionOnStaff()
         sharpImage.visibility = if (position.second == Sign.Sharp) View.VISIBLE else View.INVISIBLE
         flatImage.visibility = if (position.second == Sign.Flat) View.VISIBLE else View.INVISIBLE
-        marginParams.topMargin = Math.ceil((POSITION_OF_A_DP - position.first * NOTE_DISTANCE_DP) *
+        marginParams.topMargin = Math.ceil((POSITION_OF_C_DP - position.first * NOTE_DISTANCE_DP) *
                 (density / DisplayMetrics.DENSITY_DEFAULT)).toInt()
         noteImage.layoutParams = marginParams
     }
@@ -65,7 +65,7 @@ class NoteFragment : Fragment() {
     companion object {
         private const val ARG_NOTE = "note"
         private const val NOTE_DISTANCE_DP = 12
-        private const val POSITION_OF_A_DP = 126.25
+        private const val POSITION_OF_C_DP = 102.25
         fun newInstance(note: Note): NoteFragment {
             val fragment = NoteFragment()
             val args = Bundle()
