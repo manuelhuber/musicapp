@@ -11,7 +11,7 @@ import de.manuelhuber.music.util.rndNumber
 import kotlinx.android.synthetic.main.fragment_finger_control_exercise.*
 
 /**
- * Displays the finger control exercise
+ * The finger control exercise
  * Shows a series of fingers which the user has to move
  */
 class FingerControlExerciseFragment : Fragment() {
@@ -32,6 +32,9 @@ class FingerControlExerciseFragment : Fragment() {
         buttonFingerControl.text = getExercise()
     }
 
+    /**
+     * Generates a string of a random number of sorted fingers
+     */
     private fun getExercise(): String {
         val fingers: MutableCollection<Finger> = mutableListOf()
         val max: Int = this.getNumberOfFingers()
@@ -47,10 +50,12 @@ class FingerControlExerciseFragment : Fragment() {
                 .joinToString("-") { finger -> finger.toString() }
     }
 
+    /**
+     * Random number between 1 and 5 (for now)
+     */
     private fun getNumberOfFingers(): Int {
         return rndNumber(1, 5)
     }
-
 
     companion object {
         fun newInstance(): FingerControlExerciseFragment {

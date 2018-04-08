@@ -11,38 +11,37 @@ import de.manuelhuber.music.note.NoteFragment
 import de.manuelhuber.music.util.rndBool
 import kotlinx.android.synthetic.main.fragment_note_reading.*
 
+/**
+ * The reading notes exercise
+ */
 class NoteReadingFragment : Fragment() {
 
-    private lateinit var noteDisplay: NoteFragment
+    private lateinit var noteFragment: NoteFragment
     private var showSolution = true
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_note_reading, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        button3.setOnClickListener { click() }
-
-        noteDisplay = NoteFragment.newInstance(Note())
+        exerciseButton.setOnClickListener { click() }
+        noteFragment = NoteFragment.newInstance(Note())
         childFragmentManager.beginTransaction()
-                .add(noteFragment.id, noteDisplay)
+                .add(noteFragment.id, noteFragment)
                 .commit()
-
         super.onViewCreated(view, savedInstanceState)
-
     }
 
     private fun click() {
         if (showSolution) {
-            button3.text = noteDisplay.note.toString()
+            exerciseButton.text = noteFragment.note.toString()
         } else {
             val note = Note()
             note.decrease = rndBool()
             note.octave = if (rndBool()) 0 else -1
-            noteDisplay.note = note
-            button3.text = resources.getString(R.string.show_solution)
+            noteFragment.note = note
+            exerciseButton.text = resources.getString(R.string.show_solution)
         }
         showSolution = !showSolution
     }

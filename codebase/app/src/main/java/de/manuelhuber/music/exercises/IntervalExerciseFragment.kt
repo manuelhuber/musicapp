@@ -10,6 +10,11 @@ import de.manuelhuber.music.model.Note
 import de.manuelhuber.music.util.rndNumber
 import kotlinx.android.synthetic.main.fragment_interval_exercise.*
 
+/**
+ * The single interval exercise
+ * Shows a note and an interval between 1 and 11 (up or down). The user has to figure out the
+ * next note based on the interval.
+ */
 class IntervalExerciseFragment : Fragment() {
 
     private var note = Note()
@@ -26,18 +31,23 @@ class IntervalExerciseFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         textCurrentNote.text = note.toString()
-        layoutIntervalCenter.setOnClickListener { newNote() }
-        newNote()
+        layoutIntervalCenter.setOnClickListener { click() }
+        click()
     }
 
-    private fun newNote() {
+    private fun click() {
+        showSolution()
+        generateNewExercise()
+    }
+
+    private fun showSolution() {
         note = note.steps(step)
         textCurrentNote.text = note.toString()
-        updateButtons()
     }
 
-    private fun updateButtons() {
+    private fun generateNewExercise() {
         do step = rndNumber(-11, 11) while (step == 0 || step == -previousStep)
+        previousStep = step
         val up = step > 0
         textStepsUp.text = if (up) step.toString() else ""
         imageStepsUp.visibility = if (up) View.VISIBLE else View.INVISIBLE
