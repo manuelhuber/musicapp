@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import de.manuel_huber.music.R
 import de.manuel_huber.music.model.Note
 import de.manuel_huber.music.util.rndNumber
-import kotlinx.android.synthetic.main.fragment_intervals_exercise.*
+import kotlinx.android.synthetic.main.fragment_interval_exercise.*
 
 class IntervalExerciseFragment : Fragment() {
 
@@ -20,7 +20,7 @@ class IntervalExerciseFragment : Fragment() {
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        return inflater.inflate(R.layout.fragment_intervals_exercise, container, false)
+        return inflater.inflate(R.layout.fragment_interval_exercise, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
