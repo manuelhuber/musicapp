@@ -63,11 +63,11 @@
     <string name="accords_new_exercise">new accord</string>
 
     <!-- ACCORD NAMES -->
-    <string name="accord_major_accord">Dur-Dreiklang</string>
-    <string name="accord_minor_accord">Moll-Dreiklang</string>
-    <string name="accord_dominant_seventh">Dominant-Septakkord</string>
-    <string name="accord_minor_seventh">Moll-Septakkord</string>
-    <string name="accord_major_seventh">Dur-Septakkord</string>
+    <string name="accord_major_accord">major</string>
+    <string name="accord_minor_accord">minor</string>
+    <string name="accord_dominant_seventh">dominant seventh</string>
+    <string name="accord_minor_seventh">minor seventh</string>
+    <string name="accord_major_seventh">major seventh</string>
     <string name="accord_major_added_second">major added second</string>
     <string name="accord_minor_added_second">minor added second</string>
     <string name="accord_major_sixth">major sixth</string>
