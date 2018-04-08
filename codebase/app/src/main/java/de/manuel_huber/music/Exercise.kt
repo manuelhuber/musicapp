@@ -13,8 +13,8 @@ class Exercise : AppCompatActivity() {
             NoteReadingFragment.newInstance(),
             FingerControlExerciseFragment.newInstance(),
             IntervalExerciseFragment.newInstance(),
-            ScalesFragment.newInstance(),
-            AccordsExerciseFragment.newInstance()
+            ScaleExerciseFragment.newInstance(),
+            AccordExerciseFragment.newInstance()
     )
 
     private var currentExercise: Int = 0

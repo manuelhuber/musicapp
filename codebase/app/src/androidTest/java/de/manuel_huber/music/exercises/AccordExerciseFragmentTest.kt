@@ -16,7 +16,7 @@ import org.junit.runner.RunWith
 
 
 @RunWith(AndroidJUnit4::class)
-class AccordsExerciseFragmentTest {
+class AccordExerciseFragmentTest {
 
     @Rule
     @JvmField
@@ -24,7 +24,7 @@ class AccordsExerciseFragmentTest {
 
     @Before
     fun setUp() {
-        testActivityRule.activity.setFragment(AccordsExerciseFragment.newInstance())
+        testActivityRule.activity.setFragment(AccordExerciseFragment.newInstance())
     }
 
     @Test
