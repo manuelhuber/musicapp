@@ -38,19 +38,11 @@ class IntervalExerciseFragment : Fragment() {
 
     private fun updateButtons() {
         do step = rndNumber(-11, 11) while (step == 0 || step == -previousStep)
-        if (step > 0) {
-            textStepsUp.text = step.toString()
-            imageStepsUp.visibility = View.VISIBLE
-
-            textStepsDown.text = ""
-            imageStepsDown.visibility = View.INVISIBLE
-        } else {
-            textStepsDown.text = step.toString()
-            imageStepsDown.visibility = View.VISIBLE
-
-            textStepsUp.text = ""
-            imageStepsUp.visibility = View.INVISIBLE
-        }
+        val up = step > 0
+        textStepsUp.text = if (up) step.toString() else ""
+        imageStepsUp.visibility = if (up) View.VISIBLE else View.INVISIBLE
+        textStepsDown.text = if (!up) step.toString() else ""
+        imageStepsDown.visibility = if (!up) View.VISIBLE else View.INVISIBLE
     }
 
     companion object {
