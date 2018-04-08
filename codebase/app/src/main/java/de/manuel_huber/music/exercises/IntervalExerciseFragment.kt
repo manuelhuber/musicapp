@@ -10,7 +10,7 @@ import de.manuel_huber.music.model.Note
 import de.manuel_huber.music.util.rndNumber
 import kotlinx.android.synthetic.main.fragment_intervals_exercise.*
 
-class IntervalsExerciseFragment : Fragment() {
+class IntervalExerciseFragment : Fragment() {
 
     private var note = Note()
     private var step = rndNumber(-11, 11)
@@ -54,8 +54,8 @@ class IntervalsExerciseFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(): IntervalsExerciseFragment {
-            return IntervalsExerciseFragment()
+        fun newInstance(): IntervalExerciseFragment {
+            return IntervalExerciseFragment()
         }
     }
 }
