@@ -2,7 +2,7 @@ package de.manuel_huber.music.resources
 
 import android.content.Context
 import android.content.res.Resources
-import de.manuel_huber.music.model.Intervals
+import de.manuel_huber.music.model.IntervalSeries
 import de.manuel_huber.music.model.Note
 import de.manuel_huber.music.util.getRandomElement
 
@@ -49,15 +49,15 @@ val accordKeys = listOf(
 /**
  * Returns a random accord
  */
-fun getRandomAccord(resources: Resources, context: Context): Intervals {
+fun getRandomAccord(resources: Resources, context: Context): IntervalSeries {
     return getAccord(accordKeys.getRandomElement(), resources, context)
 }
 
 /**
- * Returns a Intervals object for the given accord key
+ * Returns a IntervalSeries object for the given accord key
  */
-private fun getAccord(accordKey: String, resources: Resources, context: Context): Intervals {
-    return Intervals(
+private fun getAccord(accordKey: String, resources: Resources, context: Context): IntervalSeries {
+    return IntervalSeries(
             getAccordStringKey(accordKey, resources, context)!!,
             getAccordSteps(accordKey, resources, context)!!,
             Note())

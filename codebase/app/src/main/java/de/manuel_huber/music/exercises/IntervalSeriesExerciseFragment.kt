@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.manuel_huber.music.R
-import de.manuel_huber.music.model.Intervals
+import de.manuel_huber.music.model.IntervalSeries
 import kotlinx.android.synthetic.main.fragment_interval_series_exercise.*
 
 /**
@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_interval_series_exercise.*
 abstract class IntervalSeriesExerciseFragment : Fragment() {
 
     private var next = NextShow.NOTE
-    private lateinit var intervalSeries: Intervals
+    private lateinit var intervalSeries: IntervalSeries
     protected abstract val title: Int
     protected abstract val description: Int
 
@@ -65,7 +65,7 @@ abstract class IntervalSeriesExerciseFragment : Fragment() {
         next = NextShow.NOTE
     }
 
-    protected abstract fun nextInterval(): Intervals
+    protected abstract fun nextInterval(): IntervalSeries
 
     enum class NextShow {
         NOTE,

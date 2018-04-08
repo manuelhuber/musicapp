@@ -2,7 +2,7 @@ package de.manuel_huber.music.exercises
 
 
 import de.manuel_huber.music.R
-import de.manuel_huber.music.model.Intervals
+import de.manuel_huber.music.model.IntervalSeries
 import de.manuel_huber.music.resources.getRandomAccord
 
 /**
@@ -16,7 +16,7 @@ class AccordsExerciseFragment : IntervalSeriesExerciseFragment() {
     override val description: Int
         get() = R.string.accords_explanation
 
-    override fun nextInterval(): Intervals {
+    override fun nextInterval(): IntervalSeries {
         return getRandomAccord(resources, context!!)
     }
 
