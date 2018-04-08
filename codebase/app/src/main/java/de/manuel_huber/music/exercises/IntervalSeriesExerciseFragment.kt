@@ -67,9 +67,5 @@ abstract class IntervalSeriesExerciseFragment : Fragment() {
 
     protected abstract fun nextInterval(): IntervalSeries
 
-    enum class NextShow {
-        NOTE,
-        INTERVAL,
-        SOLUTIONS
-    }
+    enum class NextShow { NOTE, INTERVAL, SOLUTIONS }
 }
