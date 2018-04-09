@@ -1,9 +1,10 @@
 package de.manuelhuber.music
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
+import de.manuelhuber.music.ui.exercise.ExerciseActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startExercise(view: View) {
-        val intent = Intent(this, Exercise::class.java).apply { }
+        val intent = Intent(this, ExerciseActivity::class.java).apply { }
         startActivity(intent)
     }
 }
