@@ -1,9 +1,9 @@
-package de.manuelhuber.music.ui.exercise.DI
+package de.manuelhuber.music.screens.exercise.dagger
 
 import dagger.Module
 import dagger.Provides
-import de.manuelhuber.music.ui.exercise.ExerciseContract
-import de.manuelhuber.music.ui.exercise.ExercisePresenter
+import de.manuelhuber.music.screens.exercise.core.ExerciseContract
+import de.manuelhuber.music.screens.exercise.core.ExercisePresenter
 
 
 @Module

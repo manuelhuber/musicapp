@@ -1,4 +1,4 @@
-package de.manuelhuber.music.ui.exercise
+package de.manuelhuber.music.screens.exercise.core
 
 import de.manuelhuber.music.exercise.*
 import de.manuelhuber.music.model.ExerciseFragment

@@ -1,9 +1,6 @@
-package de.manuelhuber.music.application
+package de.manuelhuber.music.dagger
 
 import android.app.Application
-import de.manuelhuber.music.dagger.AppComponent
-import de.manuelhuber.music.dagger.AppModule
-import de.manuelhuber.music.dagger.DaggerAppComponent
 
 class MusicApplication : Application() {
 

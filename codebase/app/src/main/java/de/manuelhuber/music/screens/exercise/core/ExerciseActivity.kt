@@ -1,13 +1,13 @@
-package de.manuelhuber.music.ui.exercise
+package de.manuelhuber.music.screens.exercise.core
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import de.manuelhuber.music.R
-import de.manuelhuber.music.application.MusicApplication
+import de.manuelhuber.music.dagger.MusicApplication
 import de.manuelhuber.music.model.ExerciseFragment
-import de.manuelhuber.music.ui.exercise.DI.DaggerExerciseComponent
-import de.manuelhuber.music.ui.exercise.DI.ExerciseModule
+import de.manuelhuber.music.screens.exercise.dagger.DaggerExerciseComponent
+import de.manuelhuber.music.screens.exercise.dagger.ExerciseModule
 import kotlinx.android.synthetic.main.content_exercise.*
 import javax.inject.Inject
 

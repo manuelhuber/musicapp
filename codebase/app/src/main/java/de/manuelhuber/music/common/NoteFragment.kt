@@ -1,4 +1,4 @@
-package de.manuelhuber.music.note
+package de.manuelhuber.music.common
 
 
 import android.os.Bundle

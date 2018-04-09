@@ -2,8 +2,8 @@ package de.manuelhuber.music.exercise
 
 
 import de.manuelhuber.music.R
+import de.manuelhuber.music.common.getRandomAccord
 import de.manuelhuber.music.model.IntervalSeries
-import de.manuelhuber.music.resources.getRandomAccord
 
 /**
  * The accord exercise
