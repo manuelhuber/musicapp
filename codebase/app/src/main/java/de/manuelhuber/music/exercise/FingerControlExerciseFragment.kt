@@ -1,11 +1,11 @@
 package de.manuelhuber.music.exercise
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.manuelhuber.music.R
+import de.manuelhuber.music.model.ExerciseFragment
 import de.manuelhuber.music.model.Finger
 import de.manuelhuber.music.util.rndNumber
 import kotlinx.android.synthetic.main.fragment_finger_control_exercise.*
@@ -14,7 +14,8 @@ import kotlinx.android.synthetic.main.fragment_finger_control_exercise.*
  * The finger control exercise
  * Shows a series of fingers which the user has to move
  */
-class FingerControlExerciseFragment : Fragment() {
+class FingerControlExerciseFragment : ExerciseFragment() {
+    override val title = R.string.finger_control_title
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,

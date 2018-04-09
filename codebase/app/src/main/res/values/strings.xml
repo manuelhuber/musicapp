@@ -62,6 +62,12 @@
     <string name="accords_show_solution">show solution</string>
     <string name="accords_new_exercise">new accord</string>
 
+    <!-- ACCORD EXERCISE -->
+    <string name="note_reading_title">note reading</string>
+    <string name="note_reading_heading">Get readin\'</string>
+    <string name="note_reading_explanation">Read the note</string>
+    <string name="note_reading_show_solution">show solution</string>
+
     <!-- ACCORD NAMES -->
     <string name="accord_major_accord">major</string>
     <string name="accord_minor_accord">minor</string>

@@ -2,11 +2,11 @@ package de.manuelhuber.music.exercise
 
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.manuelhuber.music.R
+import de.manuelhuber.music.model.ExerciseFragment
 import de.manuelhuber.music.model.IntervalSeries
 import kotlinx.android.synthetic.main.fragment_interval_series_exercise.*
 
@@ -15,11 +15,10 @@ import kotlinx.android.synthetic.main.fragment_interval_series_exercise.*
  * Shows a note and the interval series name, then the interval series in numbers and then the
  * actual notes
  */
-abstract class IntervalSeriesExerciseFragment : Fragment() {
+abstract class IntervalSeriesExerciseFragment : ExerciseFragment() {
 
     private var next = NextShow.NOTE
     private lateinit var intervalSeries: IntervalSeries
-    protected abstract val title: Int
     protected abstract val description: Int
 
     override fun onCreateView(inflater: LayoutInflater,

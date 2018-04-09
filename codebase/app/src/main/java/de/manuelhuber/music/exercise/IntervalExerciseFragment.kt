@@ -1,11 +1,11 @@
 package de.manuelhuber.music.exercise
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.manuelhuber.music.R
+import de.manuelhuber.music.model.ExerciseFragment
 import de.manuelhuber.music.model.Note
 import de.manuelhuber.music.util.rndNumber
 import kotlinx.android.synthetic.main.fragment_interval_exercise.*
@@ -15,7 +15,8 @@ import kotlinx.android.synthetic.main.fragment_interval_exercise.*
  * Shows a note and an interval between 1 and 11 (up or down). The user has to figure out the
  * next note based on the interval.
  */
-class IntervalExerciseFragment : Fragment() {
+class IntervalExerciseFragment : ExerciseFragment() {
+    override val title = R.string.intervals_title
 
     private var note = Note()
     private var step = rndNumber(-11, 11)

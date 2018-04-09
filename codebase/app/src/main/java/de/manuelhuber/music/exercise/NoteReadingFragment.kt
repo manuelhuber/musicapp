@@ -1,11 +1,11 @@
 package de.manuelhuber.music.exercise
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.manuelhuber.music.R
+import de.manuelhuber.music.model.ExerciseFragment
 import de.manuelhuber.music.model.Note
 import de.manuelhuber.music.note.NoteFragment
 import de.manuelhuber.music.util.rndBool
@@ -14,7 +14,8 @@ import kotlinx.android.synthetic.main.fragment_note_reading.*
 /**
  * The reading notes exercise
  */
-class NoteReadingFragment : Fragment() {
+class NoteReadingFragment : ExerciseFragment() {
+    override val title = R.string.note_reading_title
 
     private lateinit var noteDisplay: NoteFragment
     private var showSolution = true
