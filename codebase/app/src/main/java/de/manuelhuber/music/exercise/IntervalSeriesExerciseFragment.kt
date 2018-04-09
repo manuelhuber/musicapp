@@ -1,4 +1,4 @@
-package de.manuelhuber.music.exercises
+package de.manuelhuber.music.exercise
 
 
 import android.os.Bundle

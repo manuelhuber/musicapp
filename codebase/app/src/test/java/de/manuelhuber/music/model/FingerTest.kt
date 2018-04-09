@@ -20,6 +20,20 @@ class FingerTest {
     }
 
     @Test
+    fun toStringTest() {
+        assertEquals("L1", Finger(FingerPosition.Thumb, Hand.Left).toString())
+        assertEquals("L2", Finger(FingerPosition.Index, Hand.Left).toString())
+        assertEquals("L3", Finger(FingerPosition.Middle, Hand.Left).toString())
+        assertEquals("L4", Finger(FingerPosition.Ring, Hand.Left).toString())
+        assertEquals("L5", Finger(FingerPosition.Pinky, Hand.Left).toString())
+        assertEquals("R1", Finger(FingerPosition.Thumb, Hand.Right).toString())
+        assertEquals("R2", Finger(FingerPosition.Index, Hand.Right).toString())
+        assertEquals("R3", Finger(FingerPosition.Middle, Hand.Right).toString())
+        assertEquals("R4", Finger(FingerPosition.Ring, Hand.Right).toString())
+        assertEquals("R5", Finger(FingerPosition.Pinky, Hand.Right).toString())
+    }
+
+    @Test
     fun compare() {
         val first = Finger(FingerPosition.Pinky, Hand.Left)
         val second = Finger(FingerPosition.Thumb, Hand.Left)

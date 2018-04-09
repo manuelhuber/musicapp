@@ -1,4 +1,4 @@
-package de.manuelhuber.music.exercises
+package de.manuelhuber.music.exercise
 
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.action.ViewActions.click
