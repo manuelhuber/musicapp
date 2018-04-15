@@ -3,11 +3,9 @@ package de.manuelhuber.music.screens.exercise.core
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import dagger.android.AndroidInjection
 import de.manuelhuber.music.R
-import de.manuelhuber.music.dagger.MusicApplication
 import de.manuelhuber.music.model.ExerciseFragment
-import de.manuelhuber.music.screens.exercise.dagger.DaggerExerciseComponent
-import de.manuelhuber.music.screens.exercise.dagger.ExerciseModule
 import kotlinx.android.synthetic.main.content_exercise.*
 import javax.inject.Inject
 
@@ -25,14 +23,10 @@ class ExerciseActivity : AppCompatActivity(), ExerciseContract.View {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val app = (applicationContext as MusicApplication).musicComponent
-        DaggerExerciseComponent.builder()
-                .appComponent(app)
-                .exerciseModule(ExerciseModule(this))
-                .build()
-                .inject(this)
+        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
+        presenter.nextExercise()
     }
 
     override fun showExercise(exerciseFragment: ExerciseFragment) {

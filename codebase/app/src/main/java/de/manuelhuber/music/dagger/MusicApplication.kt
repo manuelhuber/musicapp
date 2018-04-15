@@ -1,19 +1,26 @@
 package de.manuelhuber.music.dagger
 
-import android.app.Application
+import android.app.Activity
+import dagger.android.AndroidInjector
+import dagger.android.DaggerApplication
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasActivityInjector
+import javax.inject.Inject
 
-class MusicApplication : Application() {
 
-    val musicComponent : AppComponent by lazy {
-        DaggerAppComponent
-                .builder()
-                .appModule(AppModule(this))
-                .build()
+class MusicApplication : DaggerApplication(), HasActivityInjector {
+
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
+        val appComponent = DaggerAppComponent.builder().application(this).build()
+        appComponent.inject(this)
+        return appComponent
     }
 
-    override fun onCreate() {
-        super.onCreate()
-        musicComponent.inject(this)
+    @Inject
+    lateinit var activityDispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
+
+    override fun activityInjector(): DispatchingAndroidInjector<Activity>? {
+        return activityDispatchingAndroidInjector
     }
 
 }

@@ -1,16 +1,15 @@
 package de.manuelhuber.music.screens.exercise.dagger
 
-import dagger.Component
+import dagger.Subcomponent
+import dagger.android.AndroidInjector
 import de.manuelhuber.music.dagger.ActivityScope
-import de.manuelhuber.music.dagger.AppComponent
 import de.manuelhuber.music.screens.exercise.core.ExerciseActivity
-import de.manuelhuber.music.screens.exercise.core.ExerciseContract.Presenter
 
 
 @ActivityScope
-@Component(dependencies = [AppComponent::class], modules = [ExerciseModule::class])
-interface ExerciseComponent {
+@Subcomponent(modules = [ExerciseModule::class])
+interface ExerciseComponent : AndroidInjector<ExerciseActivity> {
 
-    val mainPresenter: Presenter
-    fun inject(categoryActivity: ExerciseActivity)
+    @Subcomponent.Builder
+    abstract class Builder : AndroidInjector.Builder<ExerciseActivity>()
 }
