@@ -1,4 +1,4 @@
-package de.manuelhuber.music.screens.exercise.core
+package de.manuelhuber.music.screens.exercise
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

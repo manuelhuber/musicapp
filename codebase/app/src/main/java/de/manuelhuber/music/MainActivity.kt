@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import de.manuelhuber.music.screens.exercise.core.ExerciseActivity
+import de.manuelhuber.music.screens.exercise.ExerciseActivity
 
 class MainActivity : AppCompatActivity() {
 

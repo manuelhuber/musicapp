@@ -1,4 +1,4 @@
-package de.manuelhuber.music.screens.exercise.core
+package de.manuelhuber.music.screens.exercise
 
 import de.manuelhuber.music.model.ExerciseFragment
 

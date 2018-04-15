@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".screens.exercise.core.ExerciseActivity"
+            android:name=".screens.exercise.ExerciseActivity"
             android:label="@string/title_activity_exercise"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
