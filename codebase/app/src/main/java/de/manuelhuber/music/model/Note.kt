@@ -69,4 +69,23 @@ class Note(note: Int = rndNumber(0, 11), var decrease: Boolean = false, var octa
         }
     }
 
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Note
+
+        return (decrease == other.decrease &&
+                octave == other.octave &&
+                note == other.note)
+    }
+
+    override fun hashCode(): Int {
+        var result = decrease.hashCode()
+        result = 31 * result + octave
+        result = 31 * result + note
+        return result
+    }
+
+
 }

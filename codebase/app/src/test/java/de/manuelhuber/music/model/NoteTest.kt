@@ -1,6 +1,6 @@
 package de.manuelhuber.music.model
 
-import org.junit.Assert.assertEquals
+import org.junit.Assert.*
 import org.junit.Test
 
 class NoteTest {
@@ -64,5 +64,13 @@ class NoteTest {
         assertEquals("G", g.steps(-12).toString())
         assertEquals("D", g.steps(-17).toString())
         assertEquals("G", g.steps(-24).toString())
+    }
+
+    @Test
+    fun equalsTest() {
+        assertEquals(Note(1), Note(1))
+        assertTrue(Note(1) == Note(1))
+        assertNotEquals(Note(1, false), Note(1, true))
+        assertNotEquals(Note(1, false, 0), Note(1, false, 1))
     }
 }
