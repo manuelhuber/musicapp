@@ -31,6 +31,10 @@
         <activity
             android:name=".screens.settings.SettingsActivity"
             android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".screens.exerciseManagement.ExerciseManagementActivity"
+            android:label="@string/title_activity_exercise_management"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

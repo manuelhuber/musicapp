@@ -5,13 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".screens.settings.SettingsActivity"
-    tools:showIn="@layout/activity_settings">
+    tools:context=".screens.exerciseManagement.ExerciseManagementActivity"
+    tools:showIn="@layout/activity_exercise_management">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="exerciseManagementClicked"
-        android:text="Button" />
 </android.support.constraint.ConstraintLayout>
