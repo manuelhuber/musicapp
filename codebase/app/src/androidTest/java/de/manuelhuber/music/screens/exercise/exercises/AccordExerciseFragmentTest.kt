@@ -27,16 +27,23 @@ class AccordExerciseFragmentTest {
         testActivityRule.activity.setFragment(AccordExerciseFragment.newInstance())
     }
 
+    /**
+     * ^(;,;)^
+     */
     @Test
     fun sanityCheck() {
         textExercise().isNotEmptyString()
         textSteps().isEmptyString()
         textSolution().isEmptyString()
+
         button().perform(click())
+
         textExercise().isNotEmptyString()
         textSteps().isNotEmptyString()
         textSolution().isEmptyString()
+
         button().perform(click())
+
         textExercise().isNotEmptyString()
         textSteps().isNotEmptyString()
         textSolution().isNotEmptyString()
