@@ -25,9 +25,13 @@
             android:label="@string/title_activity_exercise"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="de.manuelhuber.music.test.SingleFragmentActivity"
+            android:name=".test.SingleFragmentActivity"
             android:label="@string/title_activity_single_fragement"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".screens.settings.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
