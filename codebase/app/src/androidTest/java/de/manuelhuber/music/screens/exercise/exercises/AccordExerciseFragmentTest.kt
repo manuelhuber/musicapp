@@ -6,9 +6,9 @@ import android.support.test.espresso.matcher.ViewMatchers.withId
 import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
 import de.manuelhuber.music.R
-import de.manuelhuber.music.SingleFragmentActivity
 import de.manuelhuber.music.isEmptyString
 import de.manuelhuber.music.isNotEmptyString
+import de.manuelhuber.music.test.SingleFragmentActivity
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

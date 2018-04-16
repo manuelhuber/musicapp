@@ -14,11 +14,11 @@ class ExerciseActivity : AppCompatActivity(), ExerciseContract.View {
     @Inject
     lateinit var presenter: ExerciseContract.Presenter
 
-    fun nextExercise(view: View) {
+    fun nextExercise(@Suppress("UNUSED_PARAMETER") view: View) {
         presenter.nextExercise()
     }
 
-    fun previousExercise(view: View) {
+    fun previousExercise(@Suppress("UNUSED_PARAMETER") view: View) {
         presenter.previousExercise()
     }
 

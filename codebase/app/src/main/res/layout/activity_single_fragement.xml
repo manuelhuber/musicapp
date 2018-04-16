@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SingleFragmentActivity">
+    tools:context="de.manuelhuber.music.test.SingleFragmentActivity"
+    tools:ignore="UnusedResources">
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
         android:id="@+id/contentFrame"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     </android.support.constraint.ConstraintLayout>
