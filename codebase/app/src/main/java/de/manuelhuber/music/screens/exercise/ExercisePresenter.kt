@@ -16,16 +16,16 @@ class ExercisePresenter(private val view: ExerciseContract.View) : ExerciseContr
     override fun nextExercise() {
         if (currentExercise == exercises.size - 1) return
         currentExercise++
-        displayCurrentFragment()
+        displayCurrentFragment(false)
     }
 
     override fun previousExercise() {
         if (currentExercise == 0) return
         currentExercise--
-        displayCurrentFragment()
+        displayCurrentFragment(true)
     }
 
-    private fun displayCurrentFragment() {
-        view.showExercise(exercises[currentExercise])
+    private fun displayCurrentFragment(backward: Boolean) {
+        view.showExercise(exercises[currentExercise], backward)
     }
 }
