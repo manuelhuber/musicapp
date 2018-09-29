@@ -29,7 +29,7 @@
     <!-- INTERVALS -->
     <string name="intervals_title">intervals</string>
     <string name="intervals_heading">know your alphabet!</string>
-    <string name="intervals_explanation">There will appear a arrow and a number to the left or right of the note. The number are the steps and the arrow are the direct (left = down, right = up) you have to go. Work out the note and then press the arrow to see the solution and get the next exercise</string>
+    <string name="intervals_explanation">Work out the note in your head that\'s the given amount of half-steps up or down starting from the displayed note. Press the screen to see the solution and get the next exercise</string>
     <string name="intervals_difficulty">maximum steps</string>
 
     <!-- SCALES EXERCISE-->
