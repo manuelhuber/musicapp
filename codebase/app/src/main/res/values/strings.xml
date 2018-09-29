@@ -117,4 +117,6 @@
     <string name="title_activity_single_fragement">SingleFragementActivity</string>
     <string name="title_activity_settings">settingsActivity</string>
     <string name="title_activity_exercise_management">ExerciseManagementActivity</string>
+    <string name="placeholder_long">Long ass description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley</string>
+    <string name="placeholder_short">Lorem Ipsum</string>
 </resources>

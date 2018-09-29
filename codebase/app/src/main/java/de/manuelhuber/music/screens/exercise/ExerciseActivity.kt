@@ -30,10 +30,12 @@ class ExerciseActivity : AppCompatActivity(), ExerciseContract.View {
     }
 
     override fun showExercise(exerciseFragment: ExerciseFragment) {
+        fragmentTitle.text = getString(exerciseFragment.title)
+        fragmentDescription.text = getString(exerciseFragment.description)
         supportFragmentManager
                 .beginTransaction()
                 .replace(
-                        fragment_container.id,
+                        fragmentContainer.id,
                         exerciseFragment
                 ).commit()
 

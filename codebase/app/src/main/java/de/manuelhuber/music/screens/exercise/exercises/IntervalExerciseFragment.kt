@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.fragment_interval_exercise.*
  */
 class IntervalExerciseFragment : ExerciseFragment() {
     override val title = R.string.intervals_title
+    override val description = R.string.intervals_explanation
 
     private var note = Note()
     private var step = rndNumber(-11, 11)
