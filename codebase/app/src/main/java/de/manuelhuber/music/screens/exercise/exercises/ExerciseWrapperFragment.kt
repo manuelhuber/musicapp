@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_exercise_wrapper.*
 
 
 class ExerciseWrapperFragment : Fragment() {
-    lateinit var frag: ExerciseFragment
+    private var frag: ExerciseFragment? = null
     private var b: Bitmap? = null
 
     override fun onCreateView(inflater: LayoutInflater,
@@ -28,11 +28,12 @@ class ExerciseWrapperFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        fragmentTitle.text = getString(frag.title)
-        fragmentDescription.text = getString(frag.description)
+        if (frag == null) return
+        fragmentTitle.text = getString(frag!!.title)
+        fragmentDescription.text = getString(frag!!.description)
         childFragmentManager
                 .beginTransaction()
-                .add(exerciseFragment.id, frag)
+                .add(exerciseFragment.id, frag!!)
                 .commit()
     }
 
