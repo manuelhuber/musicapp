@@ -1,4 +1,4 @@
-package de.manuelhuber.music.resources
+package de.manuelhuber.music.common
 
 import android.content.Context
 import android.content.res.Resources

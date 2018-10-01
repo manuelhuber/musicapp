@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.manuelhuber.music.R
+import de.manuelhuber.music.common.NoteFragment
 import de.manuelhuber.music.model.ExerciseFragment
 import de.manuelhuber.music.model.Note
-import de.manuelhuber.music.note.NoteFragment
 import de.manuelhuber.music.util.rndBool
 import kotlinx.android.synthetic.main.fragment_note_reading.*
 
@@ -39,7 +39,7 @@ class NoteReadingFragment : ExerciseFragment() {
             exerciseButton.text = noteDisplay.note.toString()
         } else {
             var note: Note
-            do note = Note() while (note != noteDisplay.note)
+            do note = Note() while (note == noteDisplay.note)
             note.decrease = rndBool()
             note.octave = if (rndBool()) 0 else -1
             noteDisplay.note = note
