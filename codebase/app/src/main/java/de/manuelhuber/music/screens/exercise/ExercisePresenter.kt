@@ -1,7 +1,7 @@
 package de.manuelhuber.music.screens.exercise
 
-import de.manuelhuber.music.exercise.*
 import de.manuelhuber.music.model.ExerciseFragment
+import de.manuelhuber.music.screens.exercise.exercises.*
 
 class ExercisePresenter(private val view: ExerciseContract.View) : ExerciseContract.Presenter {
     private var currentExercise = 0

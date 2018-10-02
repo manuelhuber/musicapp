@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import de.manuelhuber.music.screens.exercise.ExerciseActivity
+import de.manuelhuber.music.screens.settings.SettingsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +16,11 @@ class MainActivity : AppCompatActivity() {
 
     fun startExercise(view: View) {
         val intent = Intent(this, ExerciseActivity::class.java).apply { }
+        startActivity(intent)
+    }
+
+    fun openSettings(view: View) {
+        val intent = Intent(this, SettingsActivity::class.java).apply { }
         startActivity(intent)
     }
 }

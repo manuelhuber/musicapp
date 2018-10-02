@@ -1,4 +1,4 @@
-package de.manuelhuber.music.exercise
+package de.manuelhuber.music.screens.exercise.exercises
 
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.action.ViewActions.click
@@ -6,9 +6,9 @@ import android.support.test.espresso.matcher.ViewMatchers.withId
 import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
 import de.manuelhuber.music.R
-import de.manuelhuber.music.SingleFragmentActivity
 import de.manuelhuber.music.isEmptyString
 import de.manuelhuber.music.isNotEmptyString
+import de.manuelhuber.music.test.SingleFragmentActivity
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -27,16 +27,23 @@ class AccordExerciseFragmentTest {
         testActivityRule.activity.setFragment(AccordExerciseFragment.newInstance())
     }
 
+    /**
+     * ^(;,;)^
+     */
     @Test
     fun sanityCheck() {
         textExercise().isNotEmptyString()
         textSteps().isEmptyString()
         textSolution().isEmptyString()
+
         button().perform(click())
+
         textExercise().isNotEmptyString()
         textSteps().isNotEmptyString()
         textSolution().isEmptyString()
+
         button().perform(click())
+
         textExercise().isNotEmptyString()
         textSteps().isNotEmptyString()
         textSolution().isNotEmptyString()

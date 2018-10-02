@@ -1,4 +1,4 @@
-package de.manuelhuber.music
+package de.manuelhuber.music.test
 
 import android.os.Bundle
 import android.support.annotation.RestrictTo
@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import de.manuelhuber.music.R
 
 /**
  * Used as container to test fragments in isolation with Espresso
