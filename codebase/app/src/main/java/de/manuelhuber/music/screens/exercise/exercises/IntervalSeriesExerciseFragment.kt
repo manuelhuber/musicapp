@@ -19,7 +19,6 @@ abstract class IntervalSeriesExerciseFragment : ExerciseFragment() {
 
     private var next = NextShow.NOTE
     private lateinit var intervalSeries: IntervalSeries
-    protected abstract val description: Int
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
@@ -30,8 +29,6 @@ abstract class IntervalSeriesExerciseFragment : ExerciseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         layoutExerciseButton.setOnClickListener { click() }
-        textTitle.text = resources.getString(title)
-        titleDescription.text = resources.getString(description)
         showExercise()
     }
 

@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.fragment_note_reading.*
  * The reading notes exercise
  */
 class NoteReadingFragment : ExerciseFragment() {
+    override val description: Int = R.string.note_reading_explanation
     override val title = R.string.note_reading_title
 
     private lateinit var noteDisplay: NoteFragment

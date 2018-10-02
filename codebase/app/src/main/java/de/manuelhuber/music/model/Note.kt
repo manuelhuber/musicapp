@@ -17,29 +17,29 @@ class Note(note: Int = rndNumber(0, 11), var decrease: Boolean = false, var octa
 
     fun positionOnStaff(): Pair<Int, Sign> {
         val pair = when (note) {
-        // C
+            // C
             0 -> (Pair(0, Sign.None))
-        // C# Db
+            // C# Db
             1 -> if (decrease) Pair(1, Sign.Flat) else Pair(0, Sign.Sharp)
-        // D
+            // D
             2 -> (Pair(1, Sign.None))
-        // D# Eb
+            // D# Eb
             3 -> if (decrease) Pair(2, Sign.Flat) else Pair(1, Sign.Sharp)
-        // E
+            // E
             4 -> (Pair(2, Sign.None))
-        // F
+            // F
             5 -> (Pair(3, Sign.None))
-        // F# Gb
+            // F# Gb
             6 -> if (decrease) Pair(4, Sign.Flat) else Pair(3, Sign.Sharp)
-        // G
+            // G
             7 -> (Pair(4, Sign.None))
-        // G# Ab
+            // G# Ab
             8 -> if (decrease) Pair(5, Sign.Flat) else Pair(4, Sign.Sharp)
-        // A
+            // A
             9 -> (Pair(5, Sign.None))
-        // A# Bb
+            // A# Bb
             10 -> if (decrease) Pair(6, Sign.Flat) else Pair(5, Sign.Sharp)
-        // B
+            // B
             11 -> (Pair(6, Sign.None))
             else -> throw Error("Note")
         }

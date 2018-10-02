@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.fragment_finger_control_exercise.*
  */
 class FingerControlExerciseFragment : ExerciseFragment() {
     override val title = R.string.finger_control_title
+    override val description = R.string.finger_control_explanation
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,

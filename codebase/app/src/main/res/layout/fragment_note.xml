@@ -14,8 +14,8 @@
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="250dp"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
@@ -31,12 +31,12 @@
             android:id="@+id/noteImage"
             android:layout_width="45dp"
             android:layout_height="22dp"
+            android:layout_alignTop="@+id/imageView1"
             android:layout_alignEnd="@+id/imageView1"
             android:layout_alignRight="@+id/imageView1"
-            android:layout_alignTop="@+id/imageView1"
+            android:layout_marginTop="126.25dp"
             android:layout_marginEnd="45dp"
             android:layout_marginRight="45dp"
-            android:layout_marginTop="126.25dp"
             android:src="@drawable/note"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -47,8 +47,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/noteImage"
-            android:layout_toLeftOf="@+id/noteImage"
             android:layout_toStartOf="@+id/noteImage"
+            android:layout_toLeftOf="@+id/noteImage"
             android:src="@drawable/diminish" />
 
         <ImageView
@@ -57,8 +57,8 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/noteImage"
             android:layout_marginBottom="-3dp"
-            android:layout_toLeftOf="@+id/noteImage"
             android:layout_toStartOf="@+id/noteImage"
+            android:layout_toLeftOf="@+id/noteImage"
             android:src="@drawable/sharp" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
