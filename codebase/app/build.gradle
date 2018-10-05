@@ -33,6 +33,7 @@ dependencies {
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.google.android.gms:play-services-plus:15.0.1'
     implementation 'com.android.support:design:28.0.0'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
 
     implementation 'com.google.dagger:dagger:2.16'
     kapt 'com.google.dagger:dagger-compiler:2.16'
