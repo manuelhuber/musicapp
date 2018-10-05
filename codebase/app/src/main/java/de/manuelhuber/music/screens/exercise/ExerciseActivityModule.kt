@@ -2,17 +2,16 @@ package de.manuelhuber.music.screens.exercise
 
 import dagger.Module
 import dagger.Provides
+import de.manuelhuber.music.service.TrainingsService
 
 
 @Module
 class ExerciseActivityModule {
 
     @Provides
-    fun provideMainView(mainActivity: ExerciseActivity): ExerciseContract.View {
-        return mainActivity
-    }
+    fun provideMainView(mainActivity: ExerciseActivity): ExerciseActivity = mainActivity
 
     @Provides
-    fun provideExercisePresenter(view: ExerciseContract.View): ExerciseContract.Presenter =
-            ExercisePresenter(view)
+    fun provideViewModel(trainingService: TrainingsService): ExerciseActivityModel =
+            ExerciseActivityModel(trainingService)
 }
