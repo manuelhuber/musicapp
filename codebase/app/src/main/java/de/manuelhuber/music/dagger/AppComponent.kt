@@ -10,7 +10,8 @@ import javax.inject.Singleton
     AndroidInjectionModule::class,
     AppModule::class,
     ActivityBuilder::class,
-    ServiceBuilder::class])
+    ServiceBuilder::class,
+    ViewModelBuilder::class])
 interface AppComponent : AndroidInjector<MusicApplication> {
 
     @Component.Builder

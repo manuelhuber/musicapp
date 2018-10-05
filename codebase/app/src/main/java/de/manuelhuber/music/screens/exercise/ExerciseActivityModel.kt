@@ -6,9 +6,7 @@ import de.manuelhuber.music.model.ExerciseFragment
 import de.manuelhuber.music.model.technical.BaseViewModel
 import de.manuelhuber.music.service.TrainingsService
 import de.manuelhuber.music.util.then
-import javax.inject.Singleton
 
-@Singleton
 class ExerciseActivityModel(trainingService: TrainingsService) : BaseViewModel() {
     private var exerciseIndex = -1
 
