@@ -1,4 +1,4 @@
-package de.manuelhuber.music.dagger
+package de.manuelhuber.music.di.builder
 
 import dagger.Module
 import dagger.Provides

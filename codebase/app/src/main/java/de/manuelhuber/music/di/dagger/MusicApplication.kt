@@ -1,4 +1,4 @@
-package de.manuelhuber.music.dagger
+package de.manuelhuber.music.di.dagger
 
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
