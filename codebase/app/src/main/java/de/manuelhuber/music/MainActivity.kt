@@ -15,12 +15,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startExercise(view: View) {
-        val intent = Intent(this, ExerciseActivity::class.java).apply { }
-        startActivity(intent)
+        startActivity(Intent(this, ExerciseActivity::class.java))
     }
 
     fun openSettings(view: View) {
-        val intent = Intent(this, SettingsActivity::class.java).apply { }
-        startActivity(intent)
+        startActivity(Intent(this, SettingsActivity::class.java))
     }
 }
