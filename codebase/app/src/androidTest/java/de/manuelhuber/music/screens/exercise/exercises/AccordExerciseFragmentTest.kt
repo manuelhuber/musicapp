@@ -3,32 +3,18 @@ package de.manuelhuber.music.screens.exercise.exercises
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.action.ViewActions.click
 import android.support.test.espresso.matcher.ViewMatchers.withId
-import android.support.test.rule.ActivityTestRule
-import android.support.test.runner.AndroidJUnit4
 import de.manuelhuber.music.R
 import de.manuelhuber.music.isEmptyString
 import de.manuelhuber.music.isNotEmptyString
-import de.manuelhuber.music.test.SingleFragmentActivity
-import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
-import org.junit.runner.RunWith
 
 
-@RunWith(AndroidJUnit4::class)
-class AccordExerciseFragmentTest {
+class AccordExerciseFragmentTest : FragmentTest() {
 
-    @Rule
-    @JvmField
-    val testActivityRule = ActivityTestRule(SingleFragmentActivity::class.java, true, true)
-
-    @Before
-    fun setUp() {
-        testActivityRule.activity.setFragment(AccordExerciseFragment.newInstance())
-    }
+    override val fragment = AccordExerciseFragment.newInstance()
 
     /**
-     * ^(;,;)^
+     * ^(;,,;)^
      */
     @Test
     fun sanityCheck() {
