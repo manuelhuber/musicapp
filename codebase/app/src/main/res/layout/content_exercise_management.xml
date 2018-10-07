@@ -8,4 +8,8 @@
     tools:context=".screens.exerciseManagement.ExerciseManagementActivity"
     tools:showIn="@layout/activity_exercise_management">
 
+    <ListView
+        android:id="@+id/exerciseList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </android.support.constraint.ConstraintLayout>
