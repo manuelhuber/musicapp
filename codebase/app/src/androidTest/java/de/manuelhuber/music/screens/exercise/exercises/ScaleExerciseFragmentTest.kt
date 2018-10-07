@@ -9,9 +9,9 @@ import de.manuelhuber.music.isNotEmptyString
 import org.junit.Test
 
 
-class AccordExerciseFragmentTest : FragmentTest() {
+class ScaleExerciseFragmentTest : FragmentTest() {
 
-    override val fragment = AccordExerciseFragment.newInstance()
+    override val fragment = ScaleExerciseFragment.newInstance()
 
     /**
      * ^(;,,;)^
