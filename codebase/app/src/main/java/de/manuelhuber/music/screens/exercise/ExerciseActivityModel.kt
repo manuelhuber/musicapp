@@ -14,13 +14,15 @@ class ExerciseActivityModel(trainingService: TrainingsService) : BaseViewModel()
         MutableLiveData<Pair<ExerciseFragment, Boolean>>()
     }
     private var exercises: List<ExerciseFragment> = listOf()
+    private var showNextButton: MutableLiveData<Boolean> = MutableLiveData()
+    private var showPreviousButton: MutableLiveData<Boolean> = MutableLiveData()
 
     init {
-        println("Init view model")
         trainingService.activeExercises().subscribe { t ->
             exercises = t
             exerciseIndex = 0
             displayCurrentFragment(false)
+            updateButtons()
         }.then(::disposeAtTheEnd)
     }
 
@@ -28,16 +30,29 @@ class ExerciseActivityModel(trainingService: TrainingsService) : BaseViewModel()
         return currentExercise
     }
 
+    fun getShowNextButton(): LiveData<Boolean> {
+        return showNextButton
+    }
+
+    fun getShowPreviousButton(): LiveData<Boolean> {
+        return showPreviousButton
+    }
+
     fun nextExercise() {
-        if (exerciseIndex == exercises.size - 1) return
         exerciseIndex++
+        updateButtons()
         displayCurrentFragment(false)
     }
 
     fun previousExercise() {
-        if (exerciseIndex == 0) return
         exerciseIndex--
+        updateButtons()
         displayCurrentFragment(true)
+    }
+
+    private fun updateButtons() {
+        showPreviousButton.value = exerciseIndex > 0
+        showNextButton.value = exerciseIndex < exercises.size - 1
     }
 
     private fun displayCurrentFragment(backward: Boolean) {
