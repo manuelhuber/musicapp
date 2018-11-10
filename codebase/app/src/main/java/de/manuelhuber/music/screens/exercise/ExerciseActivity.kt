@@ -25,6 +25,12 @@ class ExerciseActivity : AppCompatActivity() {
                 this.showExercise(t.first, t.second)
             }
         })
+
+        model.getShowNextButton().observe(this,
+                Observer { t -> nextButton.visibility = if (t!!) View.VISIBLE else View.GONE })
+
+        model.getShowPreviousButton().observe(this,
+                Observer { t -> previousButton.visibility = if (t!!) View.VISIBLE else View.GONE })
     }
 
     fun previousExercise(view: View) {

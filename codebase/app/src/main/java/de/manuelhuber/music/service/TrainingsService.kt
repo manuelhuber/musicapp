@@ -24,6 +24,10 @@ class TrainingsService {
         publish()
     }
 
+    fun allExercises(): Map<ExerciseFragment, Boolean> {
+        return exercises
+    }
+
     fun activeExercises(): Observable<List<ExerciseFragment>> {
         return exercisesSubject
     }
