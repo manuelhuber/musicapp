@@ -14,7 +14,7 @@ import javax.inject.Inject
 class FreeTrainingActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var model: FreeTrainingActivityModel
+    lateinit var model: FreeTrainingModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)

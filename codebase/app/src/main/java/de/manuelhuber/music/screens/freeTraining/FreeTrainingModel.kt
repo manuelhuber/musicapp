@@ -7,7 +7,7 @@ import de.manuelhuber.music.model.technical.BaseViewModel
 import de.manuelhuber.music.service.TrainingsService
 import de.manuelhuber.music.util.then
 
-class FreeTrainingActivityModel(trainingService: TrainingsService) : BaseViewModel() {
+class FreeTrainingModel(trainingService: TrainingsService) : BaseViewModel() {
     private var exerciseIndex = -1
 
     private val currentExercise: MutableLiveData<Pair<ExerciseFragment, Boolean>> by lazy {
