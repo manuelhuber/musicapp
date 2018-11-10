@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import de.manuelhuber.music.screens.exercise.ExerciseActivity
+import de.manuelhuber.music.screens.freeTraining.FreeTrainingActivity
 import de.manuelhuber.music.screens.settings.SettingsActivity
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startExercise(view: View) {
-        startActivity(Intent(this, ExerciseActivity::class.java))
+        startActivity(Intent(this, FreeTrainingActivity::class.java))
     }
 
     fun openSettings(view: View) {

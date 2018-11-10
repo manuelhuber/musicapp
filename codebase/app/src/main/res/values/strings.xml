@@ -10,7 +10,7 @@
 
     <!-- region START SCREEN-->
     <string name="greeting">Hello!</string>
-    <string name="start">Let\'s get started!</string>
+    <string name="freeTraining">Free training</string>
     <!-- endregion-->
 
     <!-- region EXERCISE SCREEN-->

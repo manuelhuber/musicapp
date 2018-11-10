@@ -1,4 +1,4 @@
-package de.manuelhuber.music.screens.exercise
+package de.manuelhuber.music.screens.freeTraining
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
@@ -7,7 +7,7 @@ import de.manuelhuber.music.model.technical.BaseViewModel
 import de.manuelhuber.music.service.TrainingsService
 import de.manuelhuber.music.util.then
 
-class ExerciseActivityModel(trainingService: TrainingsService) : BaseViewModel() {
+class FreeTrainingActivityModel(trainingService: TrainingsService) : BaseViewModel() {
     private var exerciseIndex = -1
 
     private val currentExercise: MutableLiveData<Pair<ExerciseFragment, Boolean>> by lazy {

@@ -1,4 +1,4 @@
-package de.manuelhuber.music.screens.exercise
+package de.manuelhuber.music.screens.freeTraining
 
 import android.arch.lifecycle.Observer
 import android.os.Bundle
@@ -8,18 +8,18 @@ import dagger.android.AndroidInjection
 import de.manuelhuber.music.R
 import de.manuelhuber.music.model.ExerciseFragment
 import de.manuelhuber.music.common.exercises.ExerciseWrapperFragment
-import kotlinx.android.synthetic.main.content_exercise.*
+import kotlinx.android.synthetic.main.content_free_training.*
 import javax.inject.Inject
 
-class ExerciseActivity : AppCompatActivity() {
+class FreeTrainingActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var model: ExerciseActivityModel
+    lateinit var model: FreeTrainingActivityModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_exercise)
+        setContentView(R.layout.activity_free_training)
         model.getCurrentExercise().observe(this, Observer { t ->
             if (null != t) {
                 this.showExercise(t.first, t.second)
