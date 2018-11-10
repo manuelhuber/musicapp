@@ -35,7 +35,6 @@ class ExerciseListAdapter(context: Context,
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         if (convertView != null) return convertView
 
-        // Else: create view and viewHolder
         val newView = LayoutInflater.from(context)
                 .inflate(R.layout.adapter_exercise_list, parent, false)
 
