@@ -15,6 +15,7 @@ class UtilKtTest {
     fun loopWithinOver() {
         assertEquals(0, loopWithin(0, 12, 13))
         assertEquals(1, loopWithin(1, 12, 13))
+        assertEquals(0, loopWithin(1, 12, 25))
         assertEquals(1, loopWithin(0, 12, 14))
         assertEquals(11, loopWithin(11, 12, 15))
     }
