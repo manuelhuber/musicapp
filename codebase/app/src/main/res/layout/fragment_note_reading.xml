@@ -4,7 +4,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="de.manuelhuber.music.screens.exercise.exercises.NoteReadingFragment">
+    tools:context="de.manuelhuber.music.common.exercises.NoteReadingFragment">
 
     <FrameLayout
         android:id="@+id/noteFragment"

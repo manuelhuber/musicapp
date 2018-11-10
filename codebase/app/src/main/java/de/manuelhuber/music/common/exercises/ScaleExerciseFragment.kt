@@ -1,4 +1,4 @@
-package de.manuelhuber.music.screens.exercise.exercises
+package de.manuelhuber.music.common.exercises
 
 
 import de.manuelhuber.music.R

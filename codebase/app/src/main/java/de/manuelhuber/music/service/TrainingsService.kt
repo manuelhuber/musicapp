@@ -1,7 +1,7 @@
 package de.manuelhuber.music.service
 
+import de.manuelhuber.music.common.exercises.*
 import de.manuelhuber.music.model.ExerciseFragment
-import de.manuelhuber.music.screens.exercise.exercises.*
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 

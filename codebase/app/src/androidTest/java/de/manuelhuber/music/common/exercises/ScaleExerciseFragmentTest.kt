@@ -1,17 +1,18 @@
-package de.manuelhuber.music.screens.exercise.exercises
+package de.manuelhuber.music.common.exercises
 
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.action.ViewActions.click
 import android.support.test.espresso.matcher.ViewMatchers.withId
 import de.manuelhuber.music.R
+import de.manuelhuber.music.common.exercises.ScaleExerciseFragment
 import de.manuelhuber.music.isEmptyString
 import de.manuelhuber.music.isNotEmptyString
 import org.junit.Test
 
 
-class AccordExerciseFragmentTest : FragmentTest() {
+class ScaleExerciseFragmentTest : FragmentTest() {
 
-    override val fragment = AccordExerciseFragment.newInstance()
+    override val fragment = ScaleExerciseFragment.newInstance()
 
     /**
      * ^(;,,;)^

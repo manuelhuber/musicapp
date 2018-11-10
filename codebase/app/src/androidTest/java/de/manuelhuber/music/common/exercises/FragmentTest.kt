@@ -1,4 +1,4 @@
-package de.manuelhuber.music.screens.exercise.exercises
+package de.manuelhuber.music.common.exercises
 
 import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
