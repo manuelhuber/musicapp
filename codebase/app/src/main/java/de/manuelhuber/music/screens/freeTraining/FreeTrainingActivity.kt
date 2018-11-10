@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import dagger.android.AndroidInjection
 import de.manuelhuber.music.R
-import de.manuelhuber.music.model.ExerciseFragment
+import de.manuelhuber.music.common.exercises.ExerciseFragment
 import de.manuelhuber.music.common.exercises.ExerciseWrapperFragment
 import kotlinx.android.synthetic.main.content_free_training.*
 import javax.inject.Inject

@@ -1,4 +1,4 @@
-package de.manuelhuber.music.model
+package de.manuelhuber.music.common.exercises
 
 import android.support.v4.app.Fragment
 

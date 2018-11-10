@@ -2,7 +2,7 @@ package de.manuelhuber.music.screens.freeTraining
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
-import de.manuelhuber.music.model.ExerciseFragment
+import de.manuelhuber.music.common.exercises.ExerciseFragment
 import de.manuelhuber.music.model.technical.BaseViewModel
 import de.manuelhuber.music.service.TrainingsService
 import de.manuelhuber.music.util.then

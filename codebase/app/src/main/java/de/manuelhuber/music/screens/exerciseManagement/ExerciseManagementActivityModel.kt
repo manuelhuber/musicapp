@@ -1,6 +1,6 @@
 package de.manuelhuber.music.screens.exerciseManagement
 
-import de.manuelhuber.music.model.ExerciseFragment
+import de.manuelhuber.music.common.exercises.ExerciseFragment
 import de.manuelhuber.music.model.technical.BaseViewModel
 import de.manuelhuber.music.service.TrainingsService
 

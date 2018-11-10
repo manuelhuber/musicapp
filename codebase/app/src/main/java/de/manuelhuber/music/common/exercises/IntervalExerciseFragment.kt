@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.manuelhuber.music.R
-import de.manuelhuber.music.model.ExerciseFragment
 import de.manuelhuber.music.model.Note
 import de.manuelhuber.music.util.rndNumber
 import kotlinx.android.synthetic.main.fragment_interval_exercise.*

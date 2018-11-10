@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.Switch
 import android.widget.TextView
 import de.manuelhuber.music.R
-import de.manuelhuber.music.model.ExerciseFragment
+import de.manuelhuber.music.common.exercises.ExerciseFragment
 
 /**
  * Displays a list of fragments and a toggle to (de)activate
