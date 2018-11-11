@@ -50,7 +50,7 @@ class FreeTrainingActivity : AppCompatActivity() {
                 .beginTransaction()
                 .setCustomAnimations(enterAnimation, exitAnimation)
                 .replace(
-                        fragmentContainer.id,
+                        timedFragmentContainer.id,
                         frag
                 ).commit()
 

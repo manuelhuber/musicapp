@@ -11,6 +11,7 @@
     <!-- region START SCREEN-->
     <string name="greeting">Hello!</string>
     <string name="freeTraining">Free training</string>
+    <string name="timedTraining">Timed Training</string>
     <!-- endregion-->
 
     <!-- region EXERCISE SCREEN-->
@@ -137,5 +138,6 @@
     <string name="interval_series_composite">%1$s %2$s</string>
     <string name="placeholder_long">Long ass description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley</string>
     <string name="placeholder_short">Lorem Ipsum</string>
+    <string name="title_activity_timed_training">TimedTraining</string>
     <!-- endregion-->
 </resources>
