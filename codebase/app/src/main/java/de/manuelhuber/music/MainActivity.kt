@@ -8,6 +8,7 @@ import de.manuelhuber.music.screens.freeTraining.FreeTrainingActivity
 import de.manuelhuber.music.screens.settings.SettingsActivity
 import de.manuelhuber.music.screens.timedTraining.TimedTrainingActivity
 
+@Suppress("UNUSED_PARAMETER")
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

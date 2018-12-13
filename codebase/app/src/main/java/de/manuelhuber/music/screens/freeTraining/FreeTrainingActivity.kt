@@ -11,6 +11,7 @@ import de.manuelhuber.music.common.exercises.ExerciseWrapperFragment
 import kotlinx.android.synthetic.main.content_free_training.*
 import javax.inject.Inject
 
+@Suppress("UNUSED_PARAMETER")
 class FreeTrainingActivity : AppCompatActivity() {
 
     @Inject
