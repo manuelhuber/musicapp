@@ -10,7 +10,7 @@ import de.manuelhuber.music.util.then
 
 class TimedTrainingActivityModel(trainingService: TrainingsService) : BaseViewModel() {
 
-    val duration = 10
+    val durationData = trainingService.timedExerciseDuration
 
     private var exerciseIndex = -1
 
@@ -28,10 +28,14 @@ class TimedTrainingActivityModel(trainingService: TrainingsService) : BaseViewMo
             exerciseIndex = -1
             nextExercise()
         }.then(::disposeAtTheEnd)
-        popup.value = PopupTO("Ready?", "Click to start", "Go", this::start)
+        popup.value = PopupTO("Ready?", "Click to start", "Go") {
+            this.start()
+            popup.value = null
+        }
     }
 
     fun start() {
+        val duration = durationData.value!!
         val dur = duration * 1000L
         object : CountDownTimer(dur, 1000L) {
 
@@ -49,6 +53,7 @@ class TimedTrainingActivityModel(trainingService: TrainingsService) : BaseViewMo
             }
         }.start()
     }
+
 
     private fun end() {
         popup.value = PopupTO("Well done!", "Bottom text", "Again?")

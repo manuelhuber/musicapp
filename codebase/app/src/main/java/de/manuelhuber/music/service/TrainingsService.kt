@@ -1,7 +1,7 @@
 package de.manuelhuber.music.service
 
+import android.arch.lifecycle.MutableLiveData
 import de.manuelhuber.music.common.exercises.*
-import de.manuelhuber.music.common.exercises.ExerciseFragment
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
@@ -15,8 +15,11 @@ class TrainingsService {
     )
     private val exercisesSubject = BehaviorSubject.create<List<ExerciseFragment>>()
 
+    var timedExerciseDuration: MutableLiveData<Int> = MutableLiveData()
+
     init {
         publish()
+        timedExerciseDuration.value = 30
     }
 
     fun toggleExercise(exerciseFragment: ExerciseFragment, active: Boolean) {

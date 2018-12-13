@@ -30,7 +30,7 @@ class TimedTrainingActivity : AppCompatActivity() {
                 this.showExercise(t)
             }
         })
-        timerBar.max = model.duration
+        timerBar.max = model.durationData.value!!
         model.getProgress().observe(this, Observer { value ->
             timerBar.progress = value!!.first
             timerText.text = value.second.toString()
@@ -38,16 +38,20 @@ class TimedTrainingActivity : AppCompatActivity() {
         model.getPopup().observe(this, Observer(::displayPopup))
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        popup?.dismiss()
+    }
+
     private fun displayPopup(to: PopupTO?) {
-        if (to == null) popup?.hide()
-        else {
-            popup = AlertDialog.Builder(this)
-                    .setTitle(to.title)
-                    .setMessage(to.message)
-                    .setPositiveButton(to.buttonText) { _, _ -> to.callback() }
-                    .create()
-            popup!!.show()
-        }
+        popup?.dismiss()
+        if (to == null) return
+        popup = AlertDialog.Builder(this)
+                .setTitle(to.title)
+                .setMessage(to.message)
+                .setPositiveButton(to.buttonText) { _, _ -> to.callback() }
+                .create()
+        popup!!.show()
 
     }
 

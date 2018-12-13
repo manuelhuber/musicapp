@@ -139,5 +139,6 @@
     <string name="placeholder_long">Long ass description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley</string>
     <string name="placeholder_short">Lorem Ipsum</string>
     <string name="title_activity_timed_training">TimedTraining</string>
+    <string name="exerciseTimer">Exercise duration</string>
     <!-- endregion-->
 </resources>
