@@ -32,6 +32,10 @@ class TimedTrainingModel(trainingService: TrainingsService) : TrainingsModel() {
 
     fun pause() {
         if (timer != null) {
+            timer?.cancel()
+            timer = null
+        } else {
+            startTimer(progress.value!!.second)
         }
     }
 
@@ -46,10 +50,11 @@ class TimedTrainingModel(trainingService: TrainingsService) : TrainingsModel() {
     }
 
     fun end() {
-        popup.value = PopupTO("Well done!", "Bottom text", "Again?")
-        {
-            restart()
-        }
+        popup.value = PopupTO(
+                "Well done!",
+                "Bottom text",
+                "Again?",
+                this::restart)
     }
 
     /**
@@ -66,9 +71,10 @@ class TimedTrainingModel(trainingService: TrainingsService) : TrainingsModel() {
         return popup
     }
 
-    private fun startTimer() {
+    private fun startTimer(resumeFrom: Int = -1) {
         val duration = durationData.value!!
-        val dur = duration * 1000L
+        val dur = (if (resumeFrom > 0) resumeFrom else duration) * 1000L
+
         timer?.cancel()
         timer = object : CountDownTimer(dur, 1000L) {
 
