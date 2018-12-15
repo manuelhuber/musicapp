@@ -44,7 +44,7 @@ abstract class TrainingsModel : BaseViewModel() {
 
     private fun displayCurrentFragment(backward: Boolean): Boolean {
         updateButtons()
-        if (exerciseIndex < 0 || exerciseIndex > exercises.size) return false
+        if (exerciseIndex < 0 || exerciseIndex > exercises.size -1 ) return false
         currentExercise.value = Pair(exercises[exerciseIndex], backward)
         return true
     }
