@@ -50,6 +50,7 @@ class TimedTrainingModel(trainingService: TrainingsService) : TrainingsModel() {
     }
 
     fun end() {
+        timer?.cancel()
         popup.value = PopupTO(
                 "Well done!",
                 "Bottom text",
