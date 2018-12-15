@@ -1,6 +1,6 @@
 package de.manuelhuber.music.service
 
-import de.manuelhuber.music.model.ExerciseFragment
+import de.manuelhuber.music.common.exercises.ExerciseFragment
 import org.junit.Before
 import org.junit.Test
 

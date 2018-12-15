@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".screens.exercise.ExerciseActivity"
+            android:name=".screens.training.freeTraining.FreeTrainingActivity"
             android:label="@string/title_activity_exercise"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -35,6 +35,10 @@
         <activity
             android:name=".screens.exerciseManagement.ExerciseManagementActivity"
             android:label="@string/title_activity_exercise_management"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".screens.training.timedTraining.TimedTrainingActivity"
+            android:label="@string/title_activity_timed_training"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

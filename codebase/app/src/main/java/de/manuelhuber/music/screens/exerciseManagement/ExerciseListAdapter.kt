@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.Switch
 import android.widget.TextView
 import de.manuelhuber.music.R
-import de.manuelhuber.music.model.ExerciseFragment
+import de.manuelhuber.music.common.exercises.ExerciseFragment
 
 /**
  * Displays a list of fragments and a toggle to (de)activate
@@ -35,7 +35,6 @@ class ExerciseListAdapter(context: Context,
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         if (convertView != null) return convertView
 
-        // Else: create view and viewHolder
         val newView = LayoutInflater.from(context)
                 .inflate(R.layout.adapter_exercise_list, parent, false)
 

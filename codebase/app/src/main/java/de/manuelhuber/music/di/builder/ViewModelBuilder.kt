@@ -2,8 +2,9 @@ package de.manuelhuber.music.di.builder
 
 import dagger.Module
 import dagger.Provides
-import de.manuelhuber.music.screens.exercise.ExerciseActivityModel
 import de.manuelhuber.music.screens.exerciseManagement.ExerciseManagementActivityModel
+import de.manuelhuber.music.screens.training.freeTraining.FreeTrainingModel
+import de.manuelhuber.music.screens.training.timedTraining.TimedTrainingModel
 import de.manuelhuber.music.service.TrainingsService
 import javax.inject.Singleton
 
@@ -12,8 +13,13 @@ class ViewModelBuilder {
 
     @Provides
     @Singleton
-    fun provideExerciseActivityModel(trainingService: TrainingsService): ExerciseActivityModel =
-            ExerciseActivityModel(trainingService)
+    fun provideFreeTrainingModel(trainingService: TrainingsService): FreeTrainingModel =
+            FreeTrainingModel(trainingService)
+
+    @Provides
+    @Singleton
+    fun provideTimedTrainingActivityModel(trainingService: TrainingsService): TimedTrainingModel =
+            TimedTrainingModel(trainingService)
 
     @Provides
     @Singleton

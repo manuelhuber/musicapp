@@ -4,9 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import de.manuelhuber.music.screens.exercise.ExerciseActivity
+import de.manuelhuber.music.screens.training.freeTraining.FreeTrainingActivity
 import de.manuelhuber.music.screens.settings.SettingsActivity
+import de.manuelhuber.music.screens.training.timedTraining.TimedTrainingActivity
 
+@Suppress("UNUSED_PARAMETER")
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,8 +16,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun startExercise(view: View) {
-        startActivity(Intent(this, ExerciseActivity::class.java))
+    fun startFreeTraining(view: View) {
+        startActivity(Intent(this, FreeTrainingActivity::class.java))
+    }
+
+    fun startTimedTraining(view: View) {
+        startActivity(Intent(this, TimedTrainingActivity::class.java))
     }
 
     fun openSettings(view: View) {

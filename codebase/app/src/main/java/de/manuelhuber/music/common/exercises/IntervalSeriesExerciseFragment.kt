@@ -1,4 +1,4 @@
-package de.manuelhuber.music.screens.exercise.exercises
+package de.manuelhuber.music.common.exercises
 
 
 import android.os.Bundle
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.manuelhuber.music.R
-import de.manuelhuber.music.model.ExerciseFragment
 import de.manuelhuber.music.model.IntervalSeries
 import kotlinx.android.synthetic.main.fragment_interval_series_exercise.*
 

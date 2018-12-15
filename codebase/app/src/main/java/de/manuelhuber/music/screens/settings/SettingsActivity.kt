@@ -8,6 +8,7 @@ import de.manuelhuber.music.R
 import de.manuelhuber.music.screens.exerciseManagement.ExerciseManagementActivity
 import kotlinx.android.synthetic.main.activity_settings.*
 
+@Suppress("UNUSED_PARAMETER")
 class SettingsActivity : AppCompatActivity() {
 
     fun exerciseManagementClicked(view: View) {

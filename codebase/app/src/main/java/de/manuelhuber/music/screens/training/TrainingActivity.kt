@@ -1,25 +1,20 @@
-package de.manuelhuber.music.screens.exercise
+package de.manuelhuber.music.screens.training
 
 import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import dagger.android.AndroidInjection
 import de.manuelhuber.music.R
-import de.manuelhuber.music.model.ExerciseFragment
-import de.manuelhuber.music.screens.exercise.exercises.ExerciseWrapperFragment
-import kotlinx.android.synthetic.main.content_exercise.*
-import javax.inject.Inject
+import de.manuelhuber.music.common.exercises.ExerciseFragment
+import de.manuelhuber.music.common.exercises.ExerciseWrapperFragment
+import kotlinx.android.synthetic.main.content_free_training.*
 
-class ExerciseActivity : AppCompatActivity() {
+abstract class TrainingActivity : AppCompatActivity() {
 
-    @Inject
-    lateinit var model: ExerciseActivityModel
+    abstract val model: TrainingsModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_exercise)
         model.getCurrentExercise().observe(this, Observer { t ->
             if (null != t) {
                 this.showExercise(t.first, t.second)
@@ -41,7 +36,7 @@ class ExerciseActivity : AppCompatActivity() {
         model.nextExercise()
     }
 
-    private fun showExercise(exerciseFragment: ExerciseFragment, backward: Boolean) {
+    protected fun showExercise(exerciseFragment: ExerciseFragment, backward: Boolean) {
         val exitAnimation = if (backward) R.anim.exit_to_right else R.anim.exit_to_left
         val enterAnimation = if (backward) R.anim.enter_from_left else R.anim.enter_from_right
         val frag = ExerciseWrapperFragment()
@@ -50,7 +45,7 @@ class ExerciseActivity : AppCompatActivity() {
                 .beginTransaction()
                 .setCustomAnimations(enterAnimation, exitAnimation)
                 .replace(
-                        fragmentContainer.id,
+                        timedFragmentContainer.id,
                         frag
                 ).commit()
 
