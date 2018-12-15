@@ -60,9 +60,11 @@ class ExerciseWrapperFragment : Fragment() {
         val bitmap = Bitmap.createBitmap(v.width,
                 v.height, Bitmap.Config.ARGB_8888)
         val c = Canvas(bitmap)
-        v.layout(0, 0, v.width,
-                v.height)
-        v.draw(c)
+        if (v.width > 0 && v.height > 0) {
+            v.layout(0, 0, v.width,
+                    v.height)
+            v.draw(c)
+        }
         return bitmap
     }
 
