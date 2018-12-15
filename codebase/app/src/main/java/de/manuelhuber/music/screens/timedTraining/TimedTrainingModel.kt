@@ -8,10 +8,12 @@ import de.manuelhuber.music.model.technical.BaseViewModel
 import de.manuelhuber.music.service.TrainingsService
 import de.manuelhuber.music.util.then
 
-class TimedTrainingActivityModel(trainingService: TrainingsService) : BaseViewModel() {
+class TimedTrainingModel(trainingService: TrainingsService) : BaseViewModel() {
 
     val durationData = trainingService.timedExerciseDuration
 
+    private var showNextButton: MutableLiveData<Boolean> = MutableLiveData()
+    private var showPreviousButton: MutableLiveData<Boolean> = MutableLiveData()
     private var exerciseIndex = -1
 
     private val currentExercise: MutableLiveData<ExerciseFragment> by lazy {
@@ -21,23 +23,27 @@ class TimedTrainingActivityModel(trainingService: TrainingsService) : BaseViewMo
     private val popup: MutableLiveData<PopupTO?> = MutableLiveData()
 
     private var exercises: List<ExerciseFragment> = listOf()
+    private var timer: CountDownTimer? = null
+
 
     init {
         trainingService.activeExercises().subscribe { t ->
             exercises = t
             exerciseIndex = -1
-            nextExercise()
+            publishNextExercise()
         }.then(::disposeAtTheEnd)
         popup.value = PopupTO("Ready?", "Click to start", "Go") {
-            this.start()
+            this.startTimer()
             popup.value = null
         }
+        updateButtons()
     }
 
-    fun start() {
+    fun startTimer() {
         val duration = durationData.value!!
         val dur = duration * 1000L
-        object : CountDownTimer(dur, 1000L) {
+        timer?.cancel()
+        timer = object : CountDownTimer(dur, 1000L) {
 
             override fun onTick(millisUntilFinished: Long) {
                 val secondUntilFinished = (millisUntilFinished / 1000L).toInt()
@@ -45,25 +51,41 @@ class TimedTrainingActivityModel(trainingService: TrainingsService) : BaseViewMo
             }
 
             override fun onFinish() {
-                if (nextExercise()) {
-                    start()
+                if (publishNextExercise()) {
+                    startTimer()
                 } else {
                     end()
                 }
             }
-        }.start()
+        }
+        timer!!.start()
     }
 
+    fun rewind() {
+        startTimer()
+    }
 
-    private fun end() {
-        popup.value = PopupTO("Well done!", "Bottom text", "Again?")
-        {
-            exerciseIndex = 0
-            start()
+    fun pause() {
+        if (timer != null) {
         }
     }
 
-    private fun backToMain() {
+    fun nextExercise() {
+        publishNextExercise()
+        startTimer()
+    }
+
+    fun previousExercise() {
+        publishPreviousExercise()
+        startTimer()
+    }
+
+    fun end() {
+        popup.value = PopupTO("Well done!", "Bottom text", "Again?")
+        {
+            exerciseIndex = 0
+            startTimer()
+        }
     }
 
     /**
@@ -84,10 +106,33 @@ class TimedTrainingActivityModel(trainingService: TrainingsService) : BaseViewMo
         return currentExercise
     }
 
-    fun nextExercise(): Boolean {
+    fun getShowNextButton(): LiveData<Boolean> {
+        return showNextButton
+    }
+
+    fun getShowPreviousButton(): LiveData<Boolean> {
+        return showPreviousButton
+    }
+
+    private fun updateButtons() {
+        showPreviousButton.value = exerciseIndex > 0
+        showNextButton.value = exerciseIndex < exercises.size - 1
+    }
+
+    private fun publishNextExercise(): Boolean {
         exerciseIndex++
+        return publishExercise()
+    }
+
+    private fun publishPreviousExercise(): Boolean {
+        exerciseIndex--
+        return publishExercise()
+    }
+
+    private fun publishExercise(): Boolean {
         if (exerciseIndex < 0 || exerciseIndex >= exercises.size) return false
         currentExercise.value = exercises[exerciseIndex]
+        updateButtons()
         return true
     }
 

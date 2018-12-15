@@ -4,22 +4,44 @@ import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import dagger.android.AndroidInjection
 import de.manuelhuber.music.R
 import de.manuelhuber.music.common.exercises.ExerciseFragment
 import de.manuelhuber.music.common.exercises.ExerciseWrapperFragment
-import de.manuelhuber.music.screens.timedTraining.TimedTrainingActivityModel.PopupTO
+import de.manuelhuber.music.screens.timedTraining.TimedTrainingModel.PopupTO
 import kotlinx.android.synthetic.main.content_timed_training.*
 import javax.inject.Inject
 
 
+@Suppress("UNUSED_PARAMETER")
 class TimedTrainingActivity : AppCompatActivity() {
 
 
     @Inject
-    lateinit var model: TimedTrainingActivityModel
+    lateinit var model: TimedTrainingModel
 
     private var popup: AlertDialog? = null
+
+    fun next(view: View) {
+        model.nextExercise()
+    }
+
+    fun rewind(view: View) {
+        model.rewind()
+    }
+
+    fun pause(view: View) {
+        model.pause()
+    }
+
+    fun reset(view: View) {
+        model.end()
+    }
+
+    fun previous(view: View) {
+        model.previousExercise()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
@@ -36,6 +58,12 @@ class TimedTrainingActivity : AppCompatActivity() {
             timerText.text = value.second.toString()
         })
         model.getPopup().observe(this, Observer(::displayPopup))
+
+        model.getShowNextButton().observe(this,
+                Observer { t -> nextButton.visibility = if (t!!) View.VISIBLE else View.GONE })
+
+        model.getShowPreviousButton().observe(this,
+                Observer { t -> previousButton.visibility = if (t!!) View.VISIBLE else View.GONE })
     }
 
     override fun onDestroy() {
