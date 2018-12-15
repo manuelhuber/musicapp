@@ -1,4 +1,4 @@
-package de.manuelhuber.music.screens.timedTraining
+package de.manuelhuber.music.screens.training.timedTraining
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData

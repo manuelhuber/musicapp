@@ -3,8 +3,8 @@ package de.manuelhuber.music.di.builder
 import dagger.Module
 import dagger.Provides
 import de.manuelhuber.music.screens.exerciseManagement.ExerciseManagementActivityModel
-import de.manuelhuber.music.screens.freeTraining.FreeTrainingModel
-import de.manuelhuber.music.screens.timedTraining.TimedTrainingModel
+import de.manuelhuber.music.screens.training.freeTraining.FreeTrainingModel
+import de.manuelhuber.music.screens.training.timedTraining.TimedTrainingModel
 import de.manuelhuber.music.service.TrainingsService
 import javax.inject.Singleton
 

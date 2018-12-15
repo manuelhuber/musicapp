@@ -1,4 +1,4 @@
-package de.manuelhuber.music.screens.freeTraining
+package de.manuelhuber.music.screens.training.freeTraining
 
 import de.manuelhuber.music.screens.training.TrainingsModel
 import de.manuelhuber.music.service.TrainingsService

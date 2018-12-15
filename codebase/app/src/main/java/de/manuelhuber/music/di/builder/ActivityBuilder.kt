@@ -3,9 +3,9 @@ package de.manuelhuber.music.di.builder
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import de.manuelhuber.music.screens.exerciseManagement.ExerciseManagementActivity
-import de.manuelhuber.music.screens.freeTraining.FreeTrainingActivity
+import de.manuelhuber.music.screens.training.freeTraining.FreeTrainingActivity
 import de.manuelhuber.music.screens.settings.SettingsActivity
-import de.manuelhuber.music.screens.timedTraining.TimedTrainingActivity
+import de.manuelhuber.music.screens.training.timedTraining.TimedTrainingActivity
 
 
 @Module

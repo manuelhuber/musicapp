@@ -1,4 +1,4 @@
-package de.manuelhuber.music.screens.timedTraining
+package de.manuelhuber.music.screens.training.timedTraining
 
 import android.arch.lifecycle.Observer
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.support.v7.app.AlertDialog
 import android.view.View
 import dagger.android.AndroidInjection
 import de.manuelhuber.music.R
-import de.manuelhuber.music.screens.timedTraining.TimedTrainingModel.PopupTO
+import de.manuelhuber.music.screens.training.timedTraining.TimedTrainingModel.PopupTO
 import de.manuelhuber.music.screens.training.TrainingActivity
 import kotlinx.android.synthetic.main.content_timed_training.*
 import javax.inject.Inject

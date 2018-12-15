@@ -4,9 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import de.manuelhuber.music.screens.freeTraining.FreeTrainingActivity
+import de.manuelhuber.music.screens.training.freeTraining.FreeTrainingActivity
 import de.manuelhuber.music.screens.settings.SettingsActivity
-import de.manuelhuber.music.screens.timedTraining.TimedTrainingActivity
+import de.manuelhuber.music.screens.training.timedTraining.TimedTrainingActivity
 
 @Suppress("UNUSED_PARAMETER")
 class MainActivity : AppCompatActivity() {

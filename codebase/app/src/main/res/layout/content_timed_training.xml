@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".screens.timedTraining.TimedTrainingActivity"
+    tools:context=".screens.training.timedTraining.TimedTrainingActivity"
     tools:showIn="@layout/activity_timed_training">
 
 

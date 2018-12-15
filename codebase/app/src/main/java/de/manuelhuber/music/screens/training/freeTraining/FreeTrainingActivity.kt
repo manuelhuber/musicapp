@@ -1,4 +1,4 @@
-package de.manuelhuber.music.screens.freeTraining
+package de.manuelhuber.music.screens.training.freeTraining
 
 import android.os.Bundle
 import dagger.android.AndroidInjection
