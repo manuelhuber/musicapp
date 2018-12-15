@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_exercise_wrapper.*
 
 class ExerciseWrapperFragment : Fragment() {
     private var frag: ExerciseFragment? = null
-    private var b: Bitmap? = null
+    private var bitmap: Bitmap? = null
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
@@ -43,34 +43,34 @@ class ExerciseWrapperFragment : Fragment() {
 
     // ------------------------------- FUCKING FILTHY HACK WARNING --------------------------------
     /**
-     * This is a workaround the "disappearing child fragment" issue where the child fragment (in
-     * this case the actual exercise fragment) would disappear when the out animation starts
+     * This is a workaround for the "disappearing child fragment" issue where the child fragment
+     * ( = the actual exercise fragment) would disappear when the out animation starts.
      * We basically take a picture and set it as background for the out-animation
      * This solution taken from here:
      * https://stackoverflow.com/a/15017771
      */
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     override fun onPause() {
-        if (isRemoving) b = loadBitmapFromView(view!!)
+        if (isRemoving) bitmap = loadBitmapFromView(view!!)
         super.onPause()
     }
 
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     fun loadBitmapFromView(v: View): Bitmap {
-        val b = Bitmap.createBitmap(v.width,
+        val bitmap = Bitmap.createBitmap(v.width,
                 v.height, Bitmap.Config.ARGB_8888)
-        val c = Canvas(b)
+        val c = Canvas(bitmap)
         v.layout(0, 0, v.width,
                 v.height)
         v.draw(c)
-        return b
+        return bitmap
     }
 
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     override fun onDestroyView() {
-        val bd = BitmapDrawable(resources, b)
-        exerciseFragmentWrapper.background = bd
-        b = null
+        val drawable = BitmapDrawable(resources, bitmap)
+        exerciseFragmentWrapper.background = drawable
+        bitmap = null
         super.onDestroyView()
     }
     // ------------------------------- FUCKING FILTHY HACK OVER ------------------------------------
