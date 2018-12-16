@@ -12,10 +12,12 @@
             type="de.manuelhuber.music.screens.exerciseManagement.ExerciseManagementActivityModel" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:orientation="vertical">
+
 
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -35,28 +37,32 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/exerciseTimer" />
+                android:text="@string/exercise_timer" />
 
             <EditText
                 android:id="@+id/durationInput"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints="@string/exercise_duration_hint"
                 android:ems="10"
                 android:inputType="number"
-                android:text="@={model.duration}"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:text="@={model.duration}" />
+
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/exercise_toggle_explanation" />
 
         <ListView
             android:id="@+id/exerciseList"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
-    </android.support.constraint.ConstraintLayout>
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
 </layout>

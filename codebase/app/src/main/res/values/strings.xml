@@ -23,8 +23,11 @@
     <string name="title_activity_settings">Settings</string>
     <!-- endregion-->
 
-    <!-- region EXERCISE MANAGEMENT SCREENT -->
-    <string name="title_activity_exercise_management">Training plan</string>
+    <!-- region EXERCISE MANAGEMENT SCREEN -->
+    <string name="title_activity_exercise_management">exercises</string>
+    <string name="exercise_timer">Exercise duration</string>
+    <string name="exercise_duration_hint">duration in seconds</string>
+    <string name="exercise_toggle_explanation">Select the exercise for your trainings</string>
     <!-- endregion-->
 
     <!-- endregion-->
@@ -139,6 +142,5 @@
     <string name="placeholder_long">Long ass description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley</string>
     <string name="placeholder_short">Lorem Ipsum</string>
     <string name="title_activity_timed_training">TimedTraining</string>
-    <string name="exerciseTimer">Exercise duration</string>
     <!-- endregion-->
 </resources>
