@@ -6,13 +6,19 @@ import android.os.CountDownTimer
 import de.manuelhuber.music.screens.training.TrainingsModel
 import de.manuelhuber.music.service.TrainingsService
 import de.manuelhuber.music.util.then
+import de.manuelhuberde.annotations.GetReadOnly
 
 class TimedTrainingModel(trainingService: TrainingsService) : TrainingsModel() {
 
     val durationData = trainingService.timedExerciseDuration
 
     private val progress: MutableLiveData<Pair<Int, Int>> = MutableLiveData()
+
+    @GetReadOnly
     private val popup: MutableLiveData<PopupTO?> = MutableLiveData()
+
+    fun getPopup(): LiveData<PopupTO?> = popup
+
     private var timer: CountDownTimer? = null
 
     init {
@@ -30,14 +36,19 @@ class TimedTrainingModel(trainingService: TrainingsService) : TrainingsModel() {
         startTimer()
     }
 
-    fun pause() {
+    fun togglePause() {
         if (timer != null) {
-            timer?.cancel()
-            timer = null
+            pause()
         } else {
             startTimer(progress.value!!.second)
         }
     }
+
+    fun pause() {
+        timer?.cancel()
+        timer = null
+    }
+
 
     override fun nextExercise(): Boolean {
         startTimer()
@@ -63,13 +74,6 @@ class TimedTrainingModel(trainingService: TrainingsService) : TrainingsModel() {
      */
     fun getProgress(): LiveData<Pair<Int, Int>> {
         return progress
-    }
-
-    /**
-     * @return Pair<Seconds passed, Seconds remaining>
-     */
-    fun getPopup(): LiveData<PopupTO?> {
-        return popup
     }
 
     private fun startTimer(resumeFrom: Int = -1) {

@@ -6,8 +6,8 @@ import android.support.v7.app.AlertDialog
 import android.view.View
 import dagger.android.AndroidInjection
 import de.manuelhuber.music.R
-import de.manuelhuber.music.screens.training.timedTraining.TimedTrainingModel.PopupTO
 import de.manuelhuber.music.screens.training.TrainingActivity
+import de.manuelhuber.music.screens.training.timedTraining.TimedTrainingModel.PopupTO
 import kotlinx.android.synthetic.main.content_timed_training.*
 import javax.inject.Inject
 
@@ -26,11 +26,21 @@ class TimedTrainingActivity : TrainingActivity() {
     }
 
     fun pause(view: View) {
-        model.pause()
+        model.togglePause()
     }
 
     fun reset(view: View) {
         model.end()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        model.pause()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        model.pause()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

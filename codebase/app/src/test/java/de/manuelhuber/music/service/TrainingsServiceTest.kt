@@ -2,8 +2,10 @@ package de.manuelhuber.music.service
 
 import de.manuelhuber.music.common.exercises.ExerciseFragment
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 
+@Ignore
 class TrainingsServiceTest {
 
     lateinit var service: TrainingsService
